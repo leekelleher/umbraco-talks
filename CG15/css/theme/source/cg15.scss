@@ -12,23 +12,23 @@
 
 
 // Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900);
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #222;
+$backgroundColor: #572a6f;
 
 $mainColor: #fff;
-$headingColor: #fff;
+$headingColor: #F9FD54;
 
-$mainFontSize: 38px;
+$mainFontSize: 30px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
-$headingFontWeight: 600;
-$linkColor: #42affa;
+$headingFontWeight: 700; 
+$linkColor: #67cee8;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
@@ -47,3 +47,13 @@ section.has-light-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+body {
+	background-image:url("../../img/hero-bg2.jpg");
+	background-position:center;
+	background-size: 100%;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+	font-style: italic;
+}
