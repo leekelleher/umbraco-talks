@@ -269,7 +269,10 @@ body {
 body {
   background-image: url("../../img/hero-bg2.jpg");
   background-position: center;
-  background-size: 100%; }
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .reveal h1, .reveal h2, .reveal h3 {
   font-style: italic; }
