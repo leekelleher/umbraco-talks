@@ -43,337 +43,337 @@
 				<section>
 					<h1 style="line-height:0.9;">How to develop a<br />killer package</h1>
 					<p><a href="#">Lee Kelleher</a> / <a href="#">Matt Brailsford</a></p>
+					<aside class="notes">
+						<ol>
+							<li>Intro - (5 mins)</li>
+							<li>What are packages - (5 mins)</li>
+							<li>How to make packages - (5 mins)</li>
+							<li>How to make killer packages (ideas) - (6 mins)</li>
+							<li>How to make killer packages (shouldn'ts) - (7 mins)</li>
+							<li>How to make killer packages (shoulds) - (7 mins)</li>
+							<li>Q&A - (10 mins)</li>
+						</ol>
+						<p>Total time: 45 mins</p>
+					</aside>
 				</section>
 				
 				<section>
-					<iframe data-src="embed-crawl.html" width="100%" height="450" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					<h1>Who are we?</h1>
+					<div class="fragment fade-in">
+						<h2>Lee Kelleher</h2>
+						<h4>Umbrella Inc</h4>
+					</div>
+					<div class="fragment fade-in">
+						<h2>Matt Brailsford</h2>
+						<h4>The Outfield</h4>
+					</div>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
+					<h1>You may<br />remember us from...</h1>
+					<img data-src="img/troy-mcclure.png" alt="Troy McClure" style="border:none;background:none;height:350px;" />
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						<p>Between us we have been involved with 69 packages.</p>
+						<p>Have a total of 17,751 karma points.</p>
 					</aside>
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					<iframe data-src="embed-crawl.html" width="100%" height="550" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section data-background="img/anatomy-package.png">
+					<h2>What is an Umbraco package?</h2>
 				</section>
 
 				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
+					<h2>Creating an Umbraco package</h2>
+					<h4>I'm a beginner, show me the easy way</h4>
+					<aside class="notes">
+						<p><b>PROS</b></p>
+						<ul>
+							<li>Simple UI based builder.</li>
+							<li>Easy to add standard items to your package.</li>
+							<li>Point and click, anyone can do it.</li>
+						</ul>
+						<p><b>CONS</b></p>
+						<ul>
+							<li>Has to be run from within an Umbraco install.</li>
+							<li>Has to be done manually.</li>
+							<li>Build process can't be put under source control.</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
+				<section data-background="http://tempbuddy.com/wp-content/uploads/2015/03/Demo.gif">
+					<!-- DEMO SHOWING BACK-OFFICE PACKAGE EDITOR -->
 				</section>
 
 				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
+					<h2>Creating an Umbraco package</h2>
+					<h4>I'm a pro, show me the advanced way</h4>
+					<aside class="notes">
+						<p><b>PROS</b></p>
+						<ul>
+							<li>Build scripts are kept alongside your code.</li>
+							<li>Build scripts can be stored in source control.</li>
+							<li>Build scripts can be run as part of an automated build process.</li>
+						</ul>
+						<p><b>CONS</b></p>
+						<ul>
+							<li>A bit complex to setup (you only have to do it once though).</li>
+							<li>Some things are easier via the UI builder, (like DocTypes).</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section style="text-align: left;">
+				<section data-background="http://tempbuddy.com/wp-content/uploads/2015/03/Demo.gif">
+					<!-- DEMO A BUILD SCRIPT + ARTIFACTS -->
+				</section>
+
+				<section>
+					<h2>Creating an Umbraco package</h2>
+					<h4>Show me automation!</h4>
+					<aside class="notes">
+						<p>AppVeyor, TeamCity, others?</p>
+						<p><b>PROS</b></p>
+						<ul>
+							<li></li>
+						</ul>
+						<p><b>CONS</b></p>
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-background="http://tempbuddy.com/wp-content/uploads/2015/03/Demo.gif">
+					<!-- DEMO SHOWING AN APPVEYOR BUILD -->
+				</section>
+
+				<section>
+					<h2>How to develop a killer package</h2>
+					<div class="fragment fade-in">
+						<hr />
+						<h3>1. <span class="fragment fade-in">Killer Ideas!</span></h3>
+					</div>
+					<div class="fragment fade-in">
+						<h3>2. <span class="fragment fade-in">Things you shouldn't do!</span></h3>
+					</div>
+					<div class="fragment fade-in">
+						<h3>3. <span class="fragment fade-in">Things you should do!</span></h3>
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<h2>Killer Ideas!</h2>
+					</section>
+					<section>
+						<h2>Think!</h2>
+						<h4 class="fragment fade-in">What are your motivations?</h4>
+						<aside class="notes">
+							<p>Try to solve a real problem, think of what pains you on a regular basis.</p>
+							<p>Think beyond your own needs.</p>
+							<p>JUST DO IT!</p>
+							<p>Have a "world view".</p>
+							<p>Think beyond your own needs, think generic.</p>
+							<p><a href="https://our.umbraco.org/projects/developer-tools/robotstxt-editor/feedback/65000-Doesnt-create-file-in-load-balanced-environments" target="_blank">Forum post on thinking outside of your own needs. I had no idea that robots.txt would need to be load-balanced.</a></p>
+						</aside>
+					</section>
+					<section>
+						<h2>Share</h2>
+						<h4 class="fragment fade-in">Test your idea on others</h4>
+						<aside class="notes">
+							<p>Don’t be afraid to share, and idea on it’s own is worth nothing.</p>
+							<p>Getting a second viewpoint is way more valuable.</p>
+							<p><a href="https://sivers.org/multiply">IDEA x EXECUTION = KARMA</a></p>
+							<p>The point I want to make here is that ideas are cheap, it’s the execution that makes them killer … and is rewarded with karma.</p>
+							<p><a href="https://gist.github.com/leekelleher/3077519" target="_blank">Link to Lee's list of package ideas</a></p>
+						</aside>
+					</section>
+					<section>
+						<h2>Is it a better idea for<br />the Umbraco core?</h2>
+						<aside class="notes">
+							<p>Should you send a PR to the core instead of a package?</p>
+							<p>Case study: nuPickers</p>
+							<p>Historically release cycles weren't great, improved now, so we should think about core PR’s instead for small packages</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Think outside the box</h2>
+						<h5 class="fragment fade-in">Editor's Manual</h5>
+						<h5 class="fragment fade-in">uHangout</h5>
+						<h5 class="fragment fade-in">Skrift.io</h5>
+						<aside class="notes">
+							<p>Editor's Manual is a successful "package", (but it's not a "package")</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Things you shouldn't do!</h2>
+					</section>
+					<section>
+						<h2>Don't write hacky code</h2>
+						<h4 class="fragment fade-in">Proof in point...</h4>
+						<h5 class="fragment fade-in">Matt's "Favourite Content" package</h5>
+					</section>
+					<section>
+						<h2>Don't use fancy tech</h2>
+						<h4 class="fragment fade-in">Proof in point...</h4>
+						<h5 class="fragment fade-in">Matt's "Desktop Media Uploader" package</h5>
+						<aside class="notes">
+							<p>DMU used Flex (ActionScript)</p>
+							<p>Don't expect everyone to know your tech.</p>
+							<p>Don't make assumptions about DI/IoC.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Don't force a framework</h2>
+						<h4 class="fragment fade-in">Show of hands...</h4>
+						<h5 class="fragment fade-in">Who uses Dependency Injection?</h5>
+						<aside class="notes">
+							<p>DI and fancy design patterns are all well and good, but don't force people to follow them.</p>
+							<p>Better to have a library that fits all workflows.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Don't chase the karma*</h2>
+						<h4 class="fragment fade-in">* yes, we see the irony</h4>
+						<aside class="notes">
+							<p>Don't do it for the karma... (and we are karma whores)</p>
+							<p>"Don't chase karma; karma will come to you"</p>
+							<p>Do what's best for Umbraco / others.</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Things you should do!</h2>
+						<aside class="notes">
+							<p>Build against the lowest denominator you can</p>
+							<p>Store your files in /App_Plugins/{YOUR_PLUGIN_NAME}</p>
+							<p>Move package actions into your code to prevent version conflicts</p>
+							<p>Use ILMerge to prevent dependency conflicts</p>
+
+							<p>Merchello</p>
+							<p>Articulate</p>
+							<p>Dialogue - Lee didn’t know any of this, but he learnt to make it work the same as Articulate</p>
+
+							<p>Anti-patterns (not the Umbraco way)</p>
+							<p>uCommerce - had its own architecture (pipelines)</p>
+						</aside>
+					</section>
+					<section>
+						<h2>GIVE IT THE RIGHT NAME</h2>
+						<h4 class="fragment fade-in">Proof in point...</h4>
+						<h5 class="fragment fade-in">Lee's "Sisyphus" package</h5>
+						<h3 class="fragment fade-in">The "u" prefix phase has gone</h3>
+						<aside class="notes">
+							<p>Explain how Sisyphus was a useful package, (auto-saved property data to browser's localStorage).</p>
+							<p>But it was named after the JS library, which was equally badly named.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>MAKE IT EASY TO INSTALL</h2>
+						<h4 class="fragment fade-in">Our Umbraco</h4>
+						<h4 class="fragment fade-in">NuGet <span class="fragment fade-in">(and/or MyGet)</span></h4>
+					</section>
+					<section>
+						<h2>MAKE IT A CONSISTENT DESIGN</h2>
+						<h4 class="fragment fade-in">Proof in point...</h4>
+						<h5 class="fragment fade-in">Merchello</h5>
+						<aside class="notes">
+							<p>Make it look nice</p>
+							<p>Make it fit in and look seamless</p>
+							<p>Re-use Umbraco design patterns</p>
+							<p>Case study : Merchello / Articulate</p>
+						</aside>
+					</section>
+					<section>
+						<h2>DOCUMENT IT</h2>
+						<h4 class="fragment fade-in">README file</h4>
+						<h4>
+							<span class="fragment fade-in">Markdown,</span>
+							<span class="fragment fade-in">HTML,</span>
+							<span class="fragment fade-in">PDF,</span>
+							<span class="fragment fade-in">Word doc,</span>
+							<span class="fragment fade-in">etc...</span>
+						</h4>
+						<h4 class="fragment fade-in">GitHub Pages</h4>
+						<h4 class="fragment fade-in">readthedocs.org</h4>
+						<aside class="notes">
+							<p>Anything is better than nothing...</p>
+						</aside>
+					</section>
+					<section>
+						<h2>OPEN SOURCE IT</h2>
+						<h4 class="fragment fade-in">F.U.D.</h4>
+						<h4 class="fragment fade-in">GitHub, Bitbucket, CodePlex</h4>
+						<aside class="notes">
+							<p>F.U.D. (Don’t worry about other people looking at your code)</p>
+							<p>Don’t fear writing bad code… we still write bad code!</p>
+							<p>https://github.com/leekelleher/umbraco-mortar/issues/13</p>
+							<p>It’s how you deal with it and move on, (evolve, progress, other positive words blah blah)</p>
+							<p>You want to learn from mistakes so you can be a better developer / community member.</p>
+							<hr />
+							<p>We could say that it doesn't matter where you open-source it, but we'd be lying, we have noticed most collaborations happening at GitHub.</p>
+							<p>Release on GitHub</p>
+							<p>Issue Tracker</p>
+							<p>Discussions (on forum)</p>
+							<p>Chat (Gitter? Slack?)</p>
+						</aside>
+					</section>
+					<section>
+						<h2>GET COMMUNITY SUPPORT</h2>
+						<h4 class="fragment fade-in">Proof in point...</h4>
+						<h5 class="fragment fade-in">uComponents</h5>
+						<aside class="notes">
+							<p>Better to collab than do it alone - leverage the community.</p>
+							<p>Package ideas can come from community collab.</p>
+							<p>Don’t say “Yes” to all suggestions - stay true, stay golden.</p>
+							<p>Collab helps solve bad code … “peer review”.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>SUPPORT IT</h2>
+						<h4 class="fragment fade-in">Be prepared for support</h4>
+						<aside class="notes">
+							<p>Be prepared for support... and demanding stuff! ;-)</p>
+						</aside>
+					</section>
+					<section>
+						<h2>PROMOTE IT</h2>
+						<h4 class="fragment fade-in">YouTube videos</h4>
+						<h4 class="fragment fade-in">Collaboration</h4>
+						<h4 class="fragment fade-in">uHangout</h4>
+						<h4 class="fragment fade-in">Skrift.io</h4>
+						<h4 class="fragment fade-in">Twitter <small>(encourage RTs)</small></h4>
+					</section>
+					<section>
+						<h2>EVOLVE IT</h2>
+						<h4 class="fragment fade-in">Keep refining your ideas</h4>
+						<h4 class="fragment fade-in">Get others involved in the project</h4>
+						<h4 class="fragment fade-in">Invest time</h4>
+						<h4 class="fragment fade-in">Stay classy!</h4>
+					</section>
+				</section>
+
+				<section>
+					<h2>IN SUMMARY</h2>
+					<h4 class="fragment fade-in">Learn the basics</h4>
+					<h4 class="fragment fade-in">Think</h4>
+					<h4 class="fragment fade-in">Share</h4>
+					<h4 class="fragment fade-in">Invest</h4>
+					<h4 class="fragment fade-in">Support</h4>
+				</section>
+
+				<section data-background="img/lee-and-matt.png">
 					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+					<h4 class="fragment fade-in">Any questions?</h4>
 				</section>
 
 			</div>
