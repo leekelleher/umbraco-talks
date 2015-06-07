@@ -82,86 +82,42 @@
 					<iframe data-src="embed-crawl.html" width="100%" height="550" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 				</section>
 
-				<section data-background="img/anatomy-package.png">
-					<h2>What is an Umbraco package?</h2>
+				<section>
+					<section>
+						<h2>What this talk is <u>NOT</u> about</h2>
+						
+						<aside class="notes">
+							<p>It's not about how to create a package</p>
+							<p>No Angular JS or C#</p>
+							<p>To learn the mechanics of package creation, watch this: (umbraco.tv link)</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Learn how to make a package</h2>
+						<p>Watch this umbraco.tv episode:</p>
+						<p><a href="#">http://bit.ly/umbraco-make-package</a></p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Creating an Umbraco package</h2>
-					<h4>I'm a beginner, show me the easy way</h4>
+					<p style="background-color:red;color:black;">Do we need this slide?</p>
+					<h2>What this talk is about</h2>
 					<aside class="notes">
-						<p><b>PROS</b></p>
-						<ul>
-							<li>Simple UI based builder.</li>
-							<li>Easy to add standard items to your package.</li>
-							<li>Point and click, anyone can do it.</li>
-						</ul>
-						<p><b>CONS</b></p>
-						<ul>
-							<li>Has to be run from within an Umbraco install.</li>
-							<li>Has to be done manually.</li>
-							<li>Build process can't be put under source control.</li>
-						</ul>
+						<p>What makes the difference between a regular package and a KILLER PACKAGE!!)</p>
 					</aside>
 				</section>
-
-				<section data-background="http://tempbuddy.com/wp-content/uploads/2015/03/Demo.gif">
-					<!-- DEMO SHOWING BACK-OFFICE PACKAGE EDITOR -->
-				</section>
-
-				<section>
-					<h2>Creating an Umbraco package</h2>
-					<h4>I'm a pro, show me the advanced way</h4>
-					<aside class="notes">
-						<p><b>PROS</b></p>
-						<ul>
-							<li>Build scripts are kept alongside your code.</li>
-							<li>Build scripts can be stored in source control.</li>
-							<li>Build scripts can be run as part of an automated build process.</li>
-						</ul>
-						<p><b>CONS</b></p>
-						<ul>
-							<li>A bit complex to setup (you only have to do it once though).</li>
-							<li>Some things are easier via the UI builder, (like DocTypes).</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section data-background="http://tempbuddy.com/wp-content/uploads/2015/03/Demo.gif">
-					<!-- DEMO A BUILD SCRIPT + ARTIFACTS -->
-				</section>
-
-				<section>
-					<h2>Creating an Umbraco package</h2>
-					<h4>Show me automation!</h4>
-					<aside class="notes">
-						<p>AppVeyor, TeamCity, others?</p>
-						<p><b>PROS</b></p>
-						<ul>
-							<li></li>
-						</ul>
-						<p><b>CONS</b></p>
-						<ul>
-							<li></li>
-						</ul>
-					</aside>
-				</section>
-
-				<section data-background="http://tempbuddy.com/wp-content/uploads/2015/03/Demo.gif">
-					<!-- DEMO SHOWING AN APPVEYOR BUILD -->
-				</section>
-
+				
 				<section>
 					<h2>How to develop a killer package</h2>
 					<div class="fragment fade-in">
 						<hr />
-						<h3>1. <span class="fragment fade-in">Killer Ideas!</span></h3>
+						<h3>1. Killer Ideas!</h3>
 					</div>
 					<div class="fragment fade-in">
-						<h3>2. <span class="fragment fade-in">Things you shouldn't do!</span></h3>
+						<h3>2. Things you shouldn't do!</h3>
 					</div>
 					<div class="fragment fade-in">
-						<h3>3. <span class="fragment fade-in">Things you should do!</span></h3>
+						<h3>3. Things you should do!</h3>
 					</div>
 				</section>
 
@@ -196,7 +152,7 @@
 						<h2>Is it a better idea for<br />the Umbraco core?</h2>
 						<aside class="notes">
 							<p>Should you send a PR to the core instead of a package?</p>
-							<p>Case study: nuPickers</p>
+							<p>Case study: Recycle Bin Restore</p>
 							<p>Historically release cycles weren't great, improved now, so we should think about core PR’s instead for small packages</p>
 						</aside>
 					</section>
@@ -218,12 +174,12 @@
 					<section>
 						<h2>Don't write hacky code</h2>
 						<h4 class="fragment fade-in">Proof in point...</h4>
-						<h5 class="fragment fade-in">Matt's "Favourite Content" package</h5>
+						<h5 class="fragment fade-in">"Favourite Content" package</h5>
 					</section>
 					<section>
 						<h2>Don't use fancy tech</h2>
 						<h4 class="fragment fade-in">Proof in point...</h4>
-						<h5 class="fragment fade-in">Matt's "Desktop Media Uploader" package</h5>
+						<h5 class="fragment fade-in">"Desktop Media Uploader" package</h5>
 						<aside class="notes">
 							<p>DMU used Flex (ActionScript)</p>
 							<p>Don't expect everyone to know your tech.</p>
@@ -233,7 +189,7 @@
 					<section>
 						<h2>Don't force a framework</h2>
 						<h4 class="fragment fade-in">Show of hands...</h4>
-						<h5 class="fragment fade-in">Who uses Dependency Injection?</h5>
+						<h5 class="fragment fade-in">Who actively uses Dependency Injection?</h5>
 						<aside class="notes">
 							<p>DI and fancy design patterns are all well and good, but don't force people to follow them.</p>
 							<p>Better to have a library that fits all workflows.</p>
@@ -327,6 +283,24 @@
 							<p>Chat (Gitter? Slack?)</p>
 						</aside>
 					</section>
+					
+					
+					<section>
+						<h2>AUTOMATE IT</h2>
+						<h4>Show me automation!</h4>
+						<aside class="notes">
+							<p>AppVeyor, TeamCity, others?</p>
+							<p><b>PROS</b></p>
+							<ul>
+								<li></li>
+							</ul>
+							<p><b>CONS</b></p>
+							<ul>
+								<li></li>
+							</ul>
+						</aside>
+					</section>
+					
 					<section>
 						<h2>GET COMMUNITY SUPPORT</h2>
 						<h4 class="fragment fade-in">Proof in point...</h4>
