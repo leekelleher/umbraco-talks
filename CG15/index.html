@@ -41,17 +41,15 @@
 
 			<div class="slides">
 				<section>
-					<h1 style="line-height:0.9;">How to develop a<br />killer package</h1>
+					<h1 style="line-height:0.9;">How to develop<br />a killer package</h1>
 					<p><a href="#">Lee Kelleher</a> / <a href="#">Matt Brailsford</a></p>
 					<aside class="notes">
 						<ol>
 							<li>Intro - (5 mins)</li>
-							<li>What are packages - (5 mins)</li>
-							<li>How to make packages - (5 mins)</li>
-							<li>How to make killer packages (ideas) - (6 mins)</li>
-							<li>How to make killer packages (shouldn'ts) - (7 mins)</li>
-							<li>How to make killer packages (shoulds) - (7 mins)</li>
-							<li>Q&A - (10 mins)</li>
+							<li>How to make killer packages (ideas) - (10 mins)</li>
+							<li>How to make killer packages (shouldn'ts) - (10 mins)</li>
+							<li>How to make killer packages (shoulds) - (10 mins)</li>
+							<li>Q&amp;A - (10 mins)</li>
 						</ol>
 						<p>Total time: 45 mins</p>
 					</aside>
@@ -74,7 +72,7 @@
 					<img data-src="img/troy-mcclure.png" alt="Troy McClure" style="border:none;background:none;height:350px;" />
 					<aside class="notes">
 						<p>Between us we have been involved with 69 packages.</p>
-						<p>Have a total of 17,751 karma points.</p>
+						<p>and have a over a million karma points.</p>
 					</aside>
 				</section>
 
@@ -136,13 +134,13 @@
 							<p><a href="https://our.umbraco.org/projects/developer-tools/robotstxt-editor/feedback/65000-Doesnt-create-file-in-load-balanced-environments" target="_blank">Forum post on thinking outside of your own needs. I had no idea that robots.txt would need to be load-balanced.</a></p>
 						</aside>
 					</section>
+					
 					<section>
 						<h2>Share!</h2>
-						<h4 class="fragment fade-in">Test your idea on others</h4>
+						<h4 class="fragment fade-in">Discuss your ideas with others</h4>
 						<aside class="notes">
-							<p>Don’t be afraid to share, and idea on it’s own is worth nothing.</p>
 							<p>Getting a second viewpoint is way more valuable.</p>
-							<p><a href="https://gist.github.com/leekelleher/3077519" target="_blank">Link to Lee's list of package ideas</a></p>
+							<p>Don’t be afraid to share, and idea on it’s own is worth nothing.</p>
 						</aside>
 					</section>
 					<section>
@@ -156,13 +154,12 @@
 					<section>
 						<h3>Need an idea?</h3>
 						<p><a href="http://bitly.com/umbraco-package-ideas" target="_blank">bitly.com/umbraco-package-ideas</a></p>
-					</section>
+					</section> 
 					<section>
-						<h2>Is it a better idea for<br />the Umbraco core?</h2>
+						<h2>Is it a better idea<br />for the Umbraco core?</h2>
 						<aside class="notes">
 							<p>Should you send a PR to the core instead of a package?</p>
 							<p>Case study: Recycle Bin Restore</p>
-							<p>Historically release cycles weren't great, improved now, so we should think about core PR’s instead for small packages</p>
 						</aside>
 					</section>
 					<section>
@@ -171,7 +168,10 @@
 						<h5 class="fragment fade-in">uHangout</h5>
 						<h5 class="fragment fade-in">Skrift.io</h5>
 						<aside class="notes">
-							<p>Editor's Manual is a successful "package", (but it's not a "package")</p>
+							<p>
+								Editor's Manual is a successful "package", (but it's not a "package")<br />
+								Translated into 7 languages - lots of contributors.
+							</p>
 						</aside>
 					</section>
 				</section>
@@ -182,25 +182,41 @@
 					</section>
 					<section>
 						<h2>Don't write hacky code</h2>
-						<h4 class="fragment fade-in">Proof in point...</h4>
-						<h5 class="fragment fade-in">"Favourite Content" package</h5>
+						<h4 class="fragment fade-in">Case in point...</h4>
+						<div class="fragment fade-in">
+							<h5>"Favourite Content" package</h5>
+							<img data-src="img/favourite-content-1.gif" alt="favourite content" />
+						</div>
+					</section>
+					<section>
+						<h2>Favourite Content hacky code</h2>
+						<img data-src="img/favourite-content-2.png" alt="favourite content" />
 					</section>
 					<section>
 						<h2>Don't use fancy tech</h2>
-						<h4 class="fragment fade-in">Proof in point...</h4>
-						<h5 class="fragment fade-in">"Desktop Media Uploader" package</h5>
+						<h4 class="fragment fade-in">Case in point...</h4>
+						<div class="fragment fade-in">
+							<h5>"Desktop Media Uploader" package</h5>
+							<img data-src="img/dmu-1.jpg" alt="dmu" height="320" />
+						</div>
 						<aside class="notes">
-							<p>DMU used Flex (ActionScript)</p>
 							<p>Don't expect everyone to know your tech.</p>
-							<p>Don't make assumptions about DI/IoC.</p>
+							<p>Prevents people from contributing</p>
+							<p>Anyone remember IronPython or IronRuby?</p>
+							<p>DMU used Flex (ActionScript)</p>
 						</aside>
+					</section>
+					<section>
+						<h2>DMU unfixable bug</h2>
+						<img data-src="img/dmu-2.png" alt="dmu" />
 					</section>
 					<section>
 						<h2>Don't force a framework</h2>
 						<h4 class="fragment fade-in">Show of hands...</h4>
 						<h5 class="fragment fade-in">Who actively uses Dependency Injection?</h5>
 						<aside class="notes">
-							<p>DI and fancy design patterns are all well and good, but don't force people to follow them.</p>
+							<p>Entity Framework instead of PetaPoco</p>
+							<p>DI/IoC and fancy design patterns are all well and good, but don't force people to follow them.</p>
 							<p>Better to have a library that fits all workflows.</p>
 						</aside>
 					</section>
@@ -220,53 +236,51 @@
 						<h2>Things you should do!</h2>
 						<aside class="notes">
 							<p>Build against the lowest denominator you can</p>
-							<p>Store your files in /App_Plugins/{YOUR_PLUGIN_NAME}</p>
-							<p>Move package actions into your code to prevent version conflicts</p>
-							<p>Use ILMerge to prevent dependency conflicts</p>
-
-							<p>Merchello</p>
-							<p>Articulate</p>
-							<p>Dialogue - Lee didn’t know any of this, but he learnt to make it work the same as Articulate</p>
-
-							<p>Anti-patterns (not the Umbraco way)</p>
-							<p>uCommerce - had its own architecture (pipelines)</p>
 						</aside>
 					</section>
 					<section>
 						<h2>GIVE IT THE RIGHT NAME</h2>
-						<h4 class="fragment fade-in">Proof in point...</h4>
-						<h5 class="fragment fade-in">Lee's "Sisyphus" package</h5>
-						<h3 class="fragment fade-in">The "u" prefix phase has gone</h3>
+						<ul>
+							<li class="fragment fade-in">Make it short</li>
+							<li class="fragment fade-in">Make it relevant</li>
+							<li class="fragment fade-in">Make it easy to spell</li>
+							<li class="fragment fade-in">Avoid gimmicks</li>
+						</ul>
 						<aside class="notes">
-							<p>Explain how Sisyphus was a useful package, (auto-saved property data to browser's localStorage).</p>
-							<p>But it was named after the JS library, which was equally badly named.</p>
+							<p>Courier is a good name, but grouped with other HQ packages: Contour, Courier, Concierge</p>
+							<p>long name: uCssClassNameDropdown</p>
 						</aside>
 					</section>
 					<section>
+						<h2>The "u" prefix is DEAD!</h2>
+					</section>
+					<section>
 						<h2>MAKE IT EASY TO INSTALL</h2>
-						<h4 class="fragment fade-in">Our Umbraco</h4>
-						<h4 class="fragment fade-in">NuGet <span class="fragment fade-in">(and/or MyGet)</span></h4>
+						<h4 class="fragment fade-in">Our Umbraco <span class="fragment fade-in">(NuGet/MyGet)</span></h4>
+						<h4 class="fragment fade-in">Automate config settings (Package Actions)</h4>
 					</section>
 					<section>
 						<h2>MAKE IT A CONSISTENT DESIGN</h2>
-						<h4 class="fragment fade-in">Proof in point...</h4>
-						<h5 class="fragment fade-in">Merchello</h5>
+						<h4 class="fragment fade-in">Case in point...</h4>
+						<div class="fragment fade-in">
+							<h5>Merchello</h5>
+							<img data-src="img/merchello.png" alt="merchello" />
+						</div>
 						<aside class="notes">
 							<p>Make it look nice</p>
 							<p>Make it fit in and look seamless</p>
-							<p>Re-use Umbraco design patterns</p>
-							<p>Case study : Merchello / Articulate</p>
+							<p>HQ plan to provide pattern library</p>
 						</aside>
 					</section>
 					<section>
 						<h2>DOCUMENT IT</h2>
 						<h4 class="fragment fade-in">README file</h4>
-						<h4>
-							<span class="fragment fade-in">Markdown,</span>
-							<span class="fragment fade-in">HTML,</span>
-							<span class="fragment fade-in">PDF,</span>
-							<span class="fragment fade-in">Word doc,</span>
-							<span class="fragment fade-in">etc...</span>
+						<h4 class="fragment fade-in">
+							<span>Markdown,</span>
+							<span>HTML,</span>
+							<span>PDF,</span>
+							<span>Word doc,</span>
+							<span>etc...</span>
 						</h4>
 						<h4 class="fragment fade-in">GitHub Pages</h4>
 						<h4 class="fragment fade-in">readthedocs.org</h4>
@@ -277,16 +291,14 @@
 					<section>
 						<h2>OPEN SOURCE IT</h2>
 						<h4 class="fragment fade-in">F.U.D.</h4>
-						<h4 class="fragment fade-in">GitHub, Bitbucket, CodePlex</h4>
+						<h4 class="fragment fade-in">GitHub, <s>Bitbucket</s>, <s>CodePlex</s></h4>
 						<aside class="notes">
 							<p>F.U.D. (Don’t worry about other people looking at your code)</p>
 							<p>Don’t fear writing bad code… we still write bad code!</p>
-							<p>https://github.com/leekelleher/umbraco-mortar/issues/13</p>
-							<p>It’s how you deal with it and move on, (evolve, progress, other positive words blah blah)</p>
-							<p>You want to learn from mistakes so you can be a better developer / community member.</p>
+							<p>It’s how you deal with it and move on<br/>
+							You want to learn from mistakes so you can be a better developer / community member.</p>
 							<hr />
 							<p>We could say that it doesn't matter where you open-source it, but we'd be lying, we have noticed most collaborations happening at GitHub.</p>
-							<p>Release on GitHub</p>
 							<p>Issue Tracker</p>
 							<p>Discussions (on forum)</p>
 							<p>Chat (Gitter? Slack?)</p>
@@ -296,23 +308,15 @@
 					
 					<section>
 						<h2>AUTOMATE IT</h2>
-						<h4>Show me automation!</h4>
+						<h4 class="fragment fade-in">AppVeyor, TeamCity, build script</h4>
 						<aside class="notes">
-							<p>AppVeyor, TeamCity, others?</p>
-							<p><b>PROS</b></p>
-							<ul>
-								<li></li>
-							</ul>
-							<p><b>CONS</b></p>
-							<ul>
-								<li></li>
-							</ul>
+							
 						</aside>
 					</section>
 					
 					<section>
 						<h2>GET COMMUNITY SUPPORT</h2>
-						<h4 class="fragment fade-in">Proof in point...</h4>
+						<h4 class="fragment fade-in">Case in point...</h4>
 						<h5 class="fragment fade-in">uComponents</h5>
 						<aside class="notes">
 							<p>Better to collab than do it alone - leverage the community.</p>
@@ -334,7 +338,7 @@
 						<h4 class="fragment fade-in">Collaboration</h4>
 						<h4 class="fragment fade-in">uHangout</h4>
 						<h4 class="fragment fade-in">Skrift.io</h4>
-						<h4 class="fragment fade-in">Twitter <small>(encourage RTs)</small></h4>
+						<h4 class="fragment fade-in">Twitter</h4>
 					</section>
 					<section>
 						<h2>EVOLVE IT</h2>
@@ -355,8 +359,7 @@
 				</section>
 
 				<section data-background="img/lee-and-matt.png">
-					<h1>THE END</h1>
-					<h4 class="fragment fade-in">Any questions?</h4>
+					<h1>Any questions?</h1>
 				</section>
 
 			</div>
