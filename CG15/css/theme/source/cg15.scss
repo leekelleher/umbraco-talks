@@ -1,0 +1,62 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #572a6f;
+
+$mainColor: #fff;
+$headingColor: #F9FD54;
+
+$mainFontSize: 30px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 700; 
+$linkColor: #67cee8;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+body {
+	background-image:url("../../img/hero-bg2.jpg");
+	background-position:center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+	font-style: italic;
+}

@@ -1,0 +1,437 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HOW TO DEVELOP A KILLER PACKAGE</title>
+
+		<meta name="description" content="In this session Lee and Matt will look back through their history of developing packages and discuss what it takes to build a killer Umbraco package.">
+		<meta name="author" content="Lee Kelleher, Matt Brailsford">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="icon" type="image/png" href="/img/favicon.png">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/cg15.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1 style="line-height:0.9;">How to develop<br />a killer package</h1>
+					<p><a href="#">Lee Kelleher</a> / <a href="#">Matt Brailsford</a></p>
+					<aside class="notes">
+						<ol>
+							<li>Intro - (5 mins)</li>
+							<li>How to make killer packages (ideas) - (10 mins)</li>
+							<li>How to make killer packages (shouldn'ts) - (10 mins)</li>
+							<li>How to make killer packages (shoulds) - (10 mins)</li>
+							<li>Q&amp;A - (10 mins)</li>
+						</ol>
+						<p>Total time: 45 mins</p>
+					</aside>
+				</section>
+				
+				<section>
+					<h1>Who are we?</h1>
+					<div class="fragment fade-in">
+						<h2>Lee Kelleher</h2>
+						<h4>Umbrella Inc</h4>
+					</div>
+					<div class="fragment fade-in">
+						<h2>Matt Brailsford</h2>
+						<h4>The Outfield</h4>
+					</div>
+				</section>
+
+				<section>
+					<h1>You may<br />remember us from...</h1>
+					<img data-src="img/troy-mcclure.png" alt="Troy McClure" style="border:none;background:none;height:350px;" />
+					<aside class="notes">
+						<p>Lee</p>
+						<p>Between us we have been involved with 69 packages.</p>
+						<p>and have a over a million karma points.</p>
+					</aside>
+				</section>
+
+				<section>
+					<iframe data-src="embed-crawl.html" width="100%" height="550" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section>
+					<section>
+						<h2>What this talk is <u>NOT</u> about</h2>
+						
+						<aside class="notes">
+							<p>Lee</p>
+							<p>It's not about how to create a package</p>
+							<p>No Angular JS or C#</p>
+							<p>To learn the mechanics of package creation, watch this: (umbraco.tv link)</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Learn how to make a package</h2>
+						<p>Watch this umbraco.tv episode:</p>
+						<p><a href="http://bitly.com/umbraco-make-package">bitly.com/umbraco-make-package</a></p>
+						<aside class="notes">
+							<p>Lee</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>What this talk is about</h2>
+					<aside class="notes">
+						<p>Matt</p>
+						<p>What makes the difference between a regular package and a KILLER PACKAGE!</p>
+					</aside>
+				</section>
+				
+				<section>
+					<h2>How to develop a killer package</h2>
+					<div class="fragment fade-in">
+						<hr />
+						<h3>1. Killer Ideas!</h3>
+					</div>
+					<div class="fragment fade-in">
+						<h3>2. Things you shouldn't do!</h3>
+					</div>
+					<div class="fragment fade-in">
+						<h3>3. Things you should do!</h3>
+					</div>
+					<aside class="notes">
+						<p>Matt</p>
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h2>Killer Ideas!</h2>
+					</section>
+					<section>
+						<h2>Think!</h2>
+						<h4 class="fragment fade-in">What are your motivations?</h4>
+						<aside class="notes">
+							<p>Matt</p>
+							<p>Try to solve a real problem, think of what pains you on a regular basis.</p>
+							<p>Think beyond your own needs.</p>
+							<p>JUST DO IT!</p>
+							<p>Have a "world view".</p>
+							<p>Think beyond your own needs, think generic.</p>
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Share!</h2>
+						<h4 class="fragment fade-in">Discuss your ideas with others</h4>
+						<aside class="notes">
+							<p>Lee</p>
+							<p>Getting a second viewpoint is way more valuable.</p>
+							<p>Don’t be afraid to share, and idea on it’s own is worth nothing.</p>
+						</aside>
+					</section>
+					<section>
+						<h4>Ideas are a multiplier of execution</h4>
+						<img data-src="img/idea-x-execution.jpg" alt="Ideas are a multiplier of execution" />
+						<p><a href="https://sivers.org/multiply">sivers.org/multiply</a></p>
+						<aside class="notes">
+							<p>Lee</p>
+							<p>The point I want to make here is that ideas are cheap, it’s the execution that makes them killer … and is rewarded with karma.</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Need an idea?</h3>
+						<p><a href="http://bitly.com/umbraco-package-ideas" target="_blank">bitly.com/umbraco-package-ideas</a></p>
+					</section> 
+					<section>
+						<h2>Is it a better idea<br />for the Umbraco core?</h2>
+						<aside class="notes">
+							<p>Lee</p>
+							<p>Should you send a PR to the core instead of a package?</p>
+							<p>Case study: Recycle Bin Restore</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Think outside the box</h2>
+						<h5 class="fragment fade-in">Editor's Manual</h5>
+						<h5 class="fragment fade-in">uHangout</h5>
+						<h5 class="fragment fade-in">Skrift.io</h5>
+						<aside class="notes">
+							<p>Matt</p>
+							<p>
+								Editor's Manual is a successful "package", (but it's not a "package")<br />
+								Translated into 7 languages - lots of contributors.
+							</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Things you shouldn't do!</h2>
+					</section>
+					<section>
+						<h2>Don't write hacky code</h2>
+						<h4 class="fragment fade-in">Case in point...</h4>
+						<div class="fragment fade-in">
+							<h5>"Favourite Content" package</h5>
+							<img data-src="img/favourite-content-1.gif" alt="favourite content" />
+						</div>
+						<aside class="notes">
+							<p>Matt</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Favourite Content hacky code</h2>
+						<img data-src="img/favourite-content-2.png" alt="favourite content" />
+					</section>
+					<section>
+						<h2>Don't use fancy tech</h2>
+						<h4 class="fragment fade-in">Case in point...</h4>
+						<div class="fragment fade-in">
+							<h5>"Desktop Media Uploader" package</h5>
+							<img data-src="img/dmu-1.jpg" alt="dmu" height="320" />
+						</div>
+						<aside class="notes">
+							<p>Matt</p>
+							<p>Don't expect everyone to know your tech.</p>
+							<p>Prevents people from contributing</p>
+							<p>Anyone remember IronPython or IronRuby?</p>
+							<p>DMU used Flex (ActionScript)</p>
+						</aside>
+					</section>
+					<section>
+						<h2>DMU unfixable bug</h2>
+						<img data-src="img/dmu-2.png" alt="dmu" />
+					</section>
+					<section>
+						<h2>Don't force a framework</h2>
+						<h4 class="fragment fade-in">Show of hands...</h4>
+						<h5 class="fragment fade-in">Who actively uses Dependency Injection?</h5>
+						<aside class="notes">
+							<p>Lee</p>
+							<p>Entity Framework instead of PetaPoco</p>
+							<p>DI/IoC and fancy design patterns are all well and good, but don't force people to follow them.</p>
+							<p>Better to have a library that fits all workflows.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Don't chase the karma*</h2>
+						<h4 class="fragment fade-in">* yes, we see the irony</h4>
+						<aside class="notes">
+							<p>Lee</p>
+							<p>Don't do it for the karma... (and we are karma whores)</p>
+							<p>"Don't chase karma; karma will come to you"</p>
+							<p>Do what's best for Umbraco / others.</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Things you should do!</h2>
+						<aside class="notes">
+							<p>Build against the lowest denominator you can</p>
+						</aside>
+					</section>
+					<section>
+						<h2>GIVE IT THE RIGHT NAME</h2>
+						<ul>
+							<li class="fragment fade-in">Make it short</li>
+							<li class="fragment fade-in">Make it relevant</li>
+							<li class="fragment fade-in">Make it easy to spell</li>
+							<li class="fragment fade-in">Avoid gimmicks</li>
+						</ul>
+						<aside class="notes">
+							<p>Matt</p>
+							<p>Courier is a good name, but grouped with other HQ packages: Contour, Courier, Concierge</p>
+							<p>long name: uCssClassNameDropdown</p>
+						</aside>
+					</section>
+					<section>
+						<h2>The "u" prefix is DEAD!</h2>
+						<aside class="notes">
+							<p>Lee</p>
+						</aside>
+					</section>
+					<section>
+						<h2>MAKE IT EASY TO INSTALL</h2>
+						<h4 class="fragment fade-in">Our Umbraco <span class="fragment fade-in">(NuGet/MyGet)</span></h4>
+						<h4 class="fragment fade-in">Automate config settings (Package Actions)</h4>
+						<aside class="notes">
+							<p>Lee</p>
+						</aside>
+					</section>
+					<section>
+						<h2>MAKE IT A CONSISTENT DESIGN</h2>
+						<h4 class="fragment fade-in">Case in point...</h4>
+						<div class="fragment fade-in">
+							<h5>Merchello</h5>
+							<img data-src="img/merchello.png" alt="merchello" />
+						</div>
+						<aside class="notes">
+							<p>Matt</p>
+							<p>Make it look nice</p>
+							<p>Make it fit in and look seamless</p>
+							<p>HQ plan to provide pattern library</p>
+						</aside>
+					</section>
+					<section>
+						<h2>DOCUMENT IT</h2>
+						<h4 class="fragment fade-in">README file</h4>
+						<h4 class="fragment fade-in">
+							<span>Markdown,</span>
+							<span>HTML,</span>
+							<span>PDF,</span>
+							<span>Word doc,</span>
+							<span>etc...</span>
+						</h4>
+						<h4 class="fragment fade-in">GitHub Pages</h4>
+						<h4 class="fragment fade-in">readthedocs.org</h4>
+						<aside class="notes">
+							<p>Lee</p>
+							<p>Anything is better than nothing...</p>
+						</aside>
+					</section>
+					<section>
+						<h2>OPEN SOURCE IT</h2>
+						<h4 class="fragment fade-in">F.U.D.</h4>
+						<h4 class="fragment fade-in">GitHub, <s>Bitbucket</s>, <s>CodePlex</s></h4>
+						<aside class="notes">
+							<p>Lee &amp; Matt</p>
+							<p>Don’t fear writing bad code… we still write bad code!</p>
+							<p>It’s how you deal with it and move on<br/>
+							You want to learn from mistakes so you can be a better developer / community member.</p>
+							<hr />
+							<p>We could say that it doesn't matter where you open-source it, but we'd be lying, we have noticed most collaborations happening at GitHub.</p>
+							<p>Issue Tracker</p>
+							<p>Discussions (on forum)</p>
+							<p>Chat (Gitter? Slack?)</p>
+						</aside>
+					</section>
+					
+					
+					<section>
+						<h2>AUTOMATE IT</h2>
+						<h4 class="fragment fade-in">AppVeyor, TeamCity, build script</h4>
+						<aside class="notes">
+							<p>Lee</p>
+						</aside>
+					</section>
+					
+					<section>
+						<h2>GET COMMUNITY SUPPORT</h2>
+						<h4 class="fragment fade-in">Case in point...</h4>
+						<h5 class="fragment fade-in">uComponents</h5>
+						<aside class="notes">
+							<p>Lee</p>
+							<p>Better to collab than do it alone - leverage the community.</p>
+							<p>Package ideas can come from community collab.</p>
+							<p>Don’t say “Yes” to all suggestions - stay true, stay golden.</p>
+							<p>Collab helps solve bad code … “peer review”.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>SUPPORT IT</h2>
+						<h4 class="fragment fade-in">Be prepared for support</h4>
+						<aside class="notes">
+							<p>Matt</p>
+							<p>Be prepared for support... and demanding stuff! ;-)</p>
+						</aside>
+					</section>
+					<section>
+						<h2>PROMOTE IT</h2>
+						<h4 class="fragment fade-in">YouTube videos</h4>
+						<h4 class="fragment fade-in">Collaboration</h4>
+						<h4 class="fragment fade-in">uHangout</h4>
+						<h4 class="fragment fade-in">Skrift.io</h4>
+						<h4 class="fragment fade-in">Twitter</h4>
+						<aside class="notes">
+							<p>Matt</p>
+						</aside>
+					</section>
+					<section>
+						<h2>EVOLVE IT</h2>
+						<h4 class="fragment fade-in">Keep refining your ideas</h4>
+						<h4 class="fragment fade-in">Get others involved in the project</h4>
+						<h4 class="fragment fade-in">Invest time</h4>
+						<h4 class="fragment fade-in">Stay classy!</h4>
+						<aside class="notes">
+							<p>Lee</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>IN SUMMARY</h2>
+					<h4 class="fragment fade-in">Learn the basics</h4>
+					<h4 class="fragment fade-in">Think</h4>
+					<h4 class="fragment fade-in">Share</h4>
+					<h4 class="fragment fade-in">Invest</h4>
+					<h4 class="fragment fade-in">Support</h4>
+					<aside class="notes">
+						<p>Matt</p>
+					</aside>
+				</section>
+
+				<section data-background="img/lee-and-matt.png">
+					<h1>Any questions?</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
