@@ -12,4 +12,4 @@
 
 Copyright &copy; 2010-2015 Lee Kelleher (and [other contributors](https://github.com/leekelleher/umbraco-talks/graphs/contributors))
 
-Licensed under [Creative Commonms Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE.md)
+Licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE.md)
