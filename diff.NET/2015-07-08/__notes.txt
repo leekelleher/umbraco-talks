@@ -1,5 +1,4 @@
 # diff.NET - Umbraco 101
-
 ## An introduction to Umbraco for .NET developers
 
 # What is Umbraco?
@@ -9,9 +8,16 @@
 
 Microsoft (ASP.NET, Azure), Carlsberg (I dev'd that), Tesco, Red Bull, Jaguar, Wired/Vogue, ITN, Costa, Heniz, Peugeot, Fox, Warner Brothers, SanDisk, ABBA, Take That
 
+~300,000 active installs
+Average 1,000 installs a day
+
+# Fun Facts
+https://github.com/umbraco/Umbraco-CMS/blob/dev-v7/src/Umbraco.Web.UI.Client/src/installer/installer.service.js
+
+
 # Who am I?
 
-Lee Kelleher, web developer, started making websites in '96. Found Umbraco in 2007, got involved, made packages, etc... voted MVP x5 by the community.
+Lee Kelleher, web developer, started making websites in '96. Found Umbraco in 2007, got involved, made packages, etc... voted MVP x5 by the community.  Started a dev agency called Umbrella in 2012, exclusively do Umbraco, main client is Carlsberg Group (build sites for the majority of their brands).
 
 ## Why do i use Umbraco?
 Lets you manage your website ... Intuitive ... add pages, edit content
@@ -52,8 +58,6 @@ http://www.theoutfield.net/blog/2011/04/anatomy-of-an-umbraco-document
 
 # Want to know more?
 
-
-
 # Links
 
 # Tutorials
@@ -80,6 +84,7 @@ http://stream.umbraco.org/
 
 # Where to download?
 http://umbraco.com/
+`PM> Install-Package UmbracoCms`
 
 # User Groups
 umBristol
@@ -87,10 +92,4 @@ http://meetup.com/umBristol
 London, Manchester, Glasgow
 
 
-
-~300,000 active installs
-Average 1,000 installs a day
-
-# Fun Facts
-https://github.com/umbraco/Umbraco-CMS/blob/dev-v7/src/Umbraco.Web.UI.Client/src/installer/installer.service.js
 
