@@ -8,6 +8,7 @@
 * [CodeGarden 14 - 500 brands, Umbraco-as-a-Service... that calls for a Carlsberg!](CG14/README.md) (June 2014)
 * [CodeGarden 15 - How To Develop A Killer Package](CG15/README.md) (June 2015)
 * [diff.NET - Umbraco 101](diff.NET/2015-07-08/README.md) (July 2015)
+* [umBristol Talks - CMS "dance-off" introduction](umBristol/2015-08-25/README.md) (August 2015)
 
 ### License
 
