@@ -9,7 +9,7 @@
 * [CodeGarden 15 - How To Develop A Killer Package](CG15/README.md) (June 2015)
 * [diff.NET - Umbraco 101](diff.NET/2015-07-08/README.md) (July 2015)
 * [umBristol Talks - CMS "dance-off" introduction](umBristol/2015-08-25/README.md) (August 2015)
-* [umBristol Talks - Ditto: An introduction](umBristol/2016-05/README.md) (May 2016)
+* [umBristol Talks - Ditto: Same same but different](umBristol/2016-06-09/README.md) (June 2016)
 
 ### License
 
