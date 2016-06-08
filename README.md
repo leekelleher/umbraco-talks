@@ -9,9 +9,10 @@
 * [CodeGarden 15 - How To Develop A Killer Package](CG15/README.md) (June 2015)
 * [diff.NET - Umbraco 101](diff.NET/2015-07-08/README.md) (July 2015)
 * [umBristol Talks - CMS "dance-off" introduction](umBristol/2015-08-25/README.md) (August 2015)
+* [umBristol Talks - Ditto: Same same but different](umBristol/2016-06-09/README.md) (June 2016)
 
 ### License
 
-Copyright &copy; 2010-2015 Lee Kelleher (and [other contributors](https://github.com/leekelleher/umbraco-talks/graphs/contributors))
+Copyright &copy; 2010-2016 Lee Kelleher (and [other contributors](https://github.com/leekelleher/umbraco-talks/graphs/contributors))
 
 Licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE.md)
