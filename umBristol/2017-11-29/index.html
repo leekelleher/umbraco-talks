@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Fractal Rock - umBristol November 2017</title>
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="start">
+					<h1>Fractal Rock</h1>
+					<h3>umBristol - November 2017</h3>
+					<p>
+						<small><a href="http://leekelleher.com">Lee Kelleher</a> / <a href="https://twitter.com/leekelleher">@leekelleher</a></small>
+					</p>
+				</section>
+
+				<section id="fractal-rock" data-background-image="assets/img/fractal-rock-psychedelic.jpg" data-background-transition="zoom">
+				</section>
+
+				<section id="slides" data-background-image="assets/img/clippy.png" data-background-position="0 0">
+					<p>Slides will be online here:<br><a href="https://leekelleher.github.io/umbraco-talks/" target="_blank">leekelleher.github.io/umbraco-talks</a></p>
+				</section>
+
+				<section id="fractal-blurb" data-background-image="assets/img/fractal-ui.png" data-background-position="0 0">
+					<h2>What is Fractal?</h2>
+					<p class="fragment"><a href="https://fractal.build/" target="_blank">https://fractal.build</a></p>
+					<p class="fragment"><span>Build. </span><span>Document. </span><span>Integrate.</span></p>
+					<p class="fragment">A powerful component library &amp;<br>styleguide that fits the way you work</p>
+					<aside class="notes">
+						<p>Fractal is a tool to help you build and document web component libraries, and then integrate them into your projects.</p>
+					</aside>
+				</section>
+
+				<section id="wtf" data-background-image="assets/img/stop-hammertime.png">
+					<h2>Hold up!</h2>
+					<p>What's all this talk of styleguides,<br>pattern libraries and design systems?</p>
+					<aside class="notes">
+						<p>Talk about styleguides, pattern libraries, design systems.</p>
+					</aside>
+				</section>
+
+				<section id="styleguides-io" data-background-image="assets/img/styleguides.png" data-background-position="bottom">
+					<h2><a href="http://styleguides.io/" target="_blank">styleguides.io</a></h2>
+					<p>Website Style Guide Resources</p>
+					<p><span class="fragment">496 real-world examples</span><span class="fragment"> / 114 tools available</span></p>
+					<img data-src="assets/img/styleguides-tools.png" alt="Screengrab of styleguides.io">
+					<aside class="notes">
+						<p>Highlight the number of tools - that these are on the increase</p>
+						<p>Shows that the concept is making momentum, but there is still isn't a de facto way.</p>
+					</aside>
+				</section>
+
+				<section id="patternlab-io" data-background-image="assets/img/dna.png">
+					<h2><a href="http://patternlab.io/" target="_blank">patternlab.io</a></h2>
+					<video controls autoplay loop>
+						<source data-src="assets/vid/atomic-design.mp4" type="video/mp4" />
+					</video>
+					<aside class="notes">
+						<p>Uses the phrase "atomic design system".</p>
+						<p>Granular built up of atoms, molecules, organisms, templates and pages.</p>
+					</aside>
+				</section>
+
+				<section id="historically" data-background-image="assets/img/historical-computing.png" data-background-position="top">
+					<h2>Historically</h2>
+					<p><small><em>(from my own experience)</em></small></p>
+					<p>A CMS developer would be provided with a...</p>
+					<ul>
+						<li class="fragment">PSDs (or worse, JPEGs) - to be <i>"slice-n-diced"</i></li>
+						<li class="fragment">Static HTML - better, but still to be <i>"slice-n-diced"</i></li>
+					</ul>
+					<aside class="notes">
+						<p>Still required the design to be sliced-n-diced into target templating system, in Umbraco-land... Razor!</p>
+						<p>Any updates to the design, would mean re-implementation of said "slice-n-dicing".</p>
+					</aside>
+				</section>
+
+				<section id="back-to-the-fractal" data-background-image="assets/img/back-to-the-future.png" data-background-position="0 0">
+					<h1>Back to the Fractal</h1>
+					<aside class="notes">
+						<p>Our goal should be to move away from PSDs as design deliverables</p>
+					</aside>
+				</section>
+
+				<section id="clearleft" data-background-color="#23D8A0">
+					<svg width="70%" viewBox="1 2 152 50">
+						<g fill="none" fill-rule="evenodd">
+							<path class="Logo-text" fill="#FFFFFF" fill-rule="nonzero" d="M152.5 27.54v5.36h-2.36c-5.52 0-8.55-3.31-8.55-9.31v-6.78h-7.36V32.9h-5.61V16.81h-3.09l-.06-4.65h3.15v-.57c0-6 3-9.31 8.55-9.31h2.36v5.36h-2.36c-2 0-2.95 1.29-2.95 4v.57h7.36v-3.9l5.61-3.55v7.4h4v4.65h-4v6.78c0 2.66 1 4 2.95 4l2.36-.05zM77 11.85h5.61v21H77v-2c-1.677 1.74-4.015 2.686-6.43 2.6-5.66 0-10.09-4.84-10.09-11s4.43-11 10.09-11c2.396-.12 4.73.777 6.43 2.47v-2.07zm0 10.5c0-3.54-2.36-6.11-5.61-6.11-3.25 0-5.56 2.57-5.56 6.11 0 3.54 2.34 6.11 5.56 6.11 3.22 0 5.61-2.51 5.61-6.11zm12.88-8.67v-1.83h-5.37v21h5.6v-9.46c0-4.5.77-6.78 5-6.78h1.5v-5.4h-.23c-2.95 0-5.22.87-6.54 2.47h.04zM98 32.83h5.59V2.44H98v30.39zM17 8.1c3.178.02 6.098 1.75 7.64 4.53l.12.21.2-.13 4.83-3.07.2-.13-.13-.2c-2.834-4.3-7.642-6.88-12.79-6.87-4.122-.062-8.095 1.538-11.025 4.44-2.93 2.9-4.567 6.858-4.545 10.98-.027 4.137 1.612 8.112 4.55 11.026 2.936 2.914 6.923 4.523 11.06 4.464 5.11.06 9.91-2.455 12.77-6.69l.13-.19-5.2-3.47-.13.2c-1.56 2.736-4.46 4.432-7.61 4.45-5.16 0-9.2-4.32-9.2-9.84 0-4.75 3.43-9.71 9.13-9.71zm14.57 24.73h5.59V2.44h-5.59v30.39zm94-10.51c0 .58 0 1.15-.09 1.69v.47h-14.8c.514 2.518 2.805 4.272 5.37 4.11 2.006-.047 3.94-.75 5.51-2l.43-.34 2.77 4-.35.3c-2.394 2.048-5.472 3.12-8.62 3-6.37 0-10.82-4.57-10.82-11.12 0-6.55 4.34-11.12 10.55-11.12 5.88-.09 10.01 4.48 10.03 11.01h.02zm-5.63-2.22c-.57-2.54-2.16-3.94-4.5-3.94-2.35-.09-4.39 1.61-4.72 3.94h9.22zm-60.73 2.22c0 .58 0 1.15-.09 1.69v.47H44.34c.514 2.518 2.805 4.272 5.37 4.11 2.006-.047 3.94-.75 5.51-2l.43-.34 2.77 4-.35.3c-2.394 2.048-5.472 3.12-8.62 3-6.37 0-10.82-4.57-10.82-11.12 0-6.55 4.37-11.21 10.54-11.21 5.89 0 10.02 4.57 10.04 11.1zm-5.63-2.22c-.57-2.54-2.16-3.94-4.5-3.94-2.35-.09-4.39 1.61-4.72 3.94h9.22z"></path>
+							<path class="Logo-streak" fill="#1F6B9C" d="M151.8 44c-.083-.487-.365-.918-.78-1.187-.413-.27-.92-.354-1.4-.233-1.067.35-2.204.433-3.31.24-1.39-.18-2.86-.31-4.29-.46-2.39-.26-4.79-.47-7.2-.66-2.63-.2-5.27-.34-7.9-.52-2.48-.17-4.95-.39-7.43-.51-5.24-.253-10.483-.45-15.73-.59-4.37-.15-19.57-.32-23.95-.26-3.07 0-6.13.14-9.19.18-4.06 0-18.94.34-23 .58-4.33.23-8.68.38-13 .68-4 .27-8 .45-11.94.74-.906.02-1.81.115-2.7.28-2.35 0-4.43.22-6.52.33-1.66.09-3.36.13-5 .38v0c-.69 0-1-.4-2.07-.26-1.07.14-2.07.46-2.12 1.06-.55.12 0 .41-.62.52v.47c.43.2.56.41 0 .66v.19c.34-.14.39 0 .56.07v.39c-.4.19-.16.37-.09.54.07.17.5.44.42.71-.086.49.11.984.51 1.28v.23c.11.7 1.05 1.28 1.18 2 .1.55 1 1 2.31.89 1.12-.06 1.51-.53 2.53-.68.19 0 .81-.09 1-.1 4.23-.28 8.46-.59 12.66-1 1.24-.11 2.58-.08 3.72-.3 1.5-.29 3.07-.29 4.59-.5 2.867-.348 5.752-.515 8.64-.5 2.41 0 4.77-.26 7.16-.36 1.33-.06 2.66.06 4-.08.518-.097 1.043-.144 1.57-.14 1.43.09 13.66-.12 15.1-.11 2.79 0 5.58-.14 8.36-.17 3.3-.06 17.36-.17 20.68 0 1.13 0 2.31.21 3.37.15 3.11-.17 6.19.1 9.28.17 2.71.06 5.39.31 8.11.39 2.72.08 5.22.23 7.8.51 1 .11 2.08.25 3.15.35.84.08 1.41-.21 2.21-.11 2 .27 4.11.46 6.21.61 1.088.028 2.173.122 3.25.28 1.56.326 3.14.547 4.73.66l1 .36c.856.423 1.835.526 2.76.29.523-.344.77-.984.61-1.59v-.18c.1-.15.19-.31.09-.48.26-.1.28-.22.21-.37.25-.57.71-1.11.44-1.74-.11-.25-.39-.62.42-.79v-.47c-.39-.05-.43-.19-.51-.32.04-.52.1-1.02.12-1.52zm-73.48 1.26c-.063-.008-.127-.008-.19 0 .063-.008.127-.008.19 0z"></path>
+						</g>
+					</svg>
+					<aside class="notes">
+						<p>We worked with an agency called Clearleft.</p>
+						<p>Clearleft were building the components in Fractal.</p>
+						<p>Given all the components were being broken down into their own templates (partial-views) and context-data (view-models).</p>
+					</aside>
+				</section>
+
+				<section id="demo-fractal" data-background-image="assets/img/fractal-ui.png" data-background-position="0 0">
+					<h2>Fractal Demo</h2>
+					<aside class="notes">
+						<p>Show how the components are separated, the break down of context-data, view-template, assets and info, etc.</p>
+						<p>Reviewing the components, the separation was clear</p>
+						<p>Could the view-templates be reused? Or to rephrase that... "the view-templates could be reused"</p>
+					</aside>
+				</section>
+
+				<section id="mind-blown" data-background-image="assets/img/mind-blown.gif">
+					<h2>We could use these templates!</h2>
+					<img data-src="assets/img/mind-blown.gif" alt="Mind blown animated gif">
+					<aside class="notes">
+						<p>If we were already been given the templates, then why would we spend the effort in re-templating those in our own templating-system, (Razor).</p>
+					</aside>
+				</section>
+
+				<section id="but-how" data-background-image="assets/img/thinking.png">
+					<h2>But how?</h2>
+					<aside class="notes">
+						<p>But! How would we handle any markup updates?</p>
+						<p>If a change was made in one it had to be made in the other. If logic was added to one it had to be re-implemented in another. This was not an ideal scenario so I set out to fix it.</p>
+					</aside>
+				</section>
+
+				<section id="source-of-truth" data-background-image="assets/img/fraggle-rock-puppeteers.png" data-background-position="0 0">
+					<h2>"<a href="https://rachelandrew.co.uk/archives/2016/05/06/rebuilding-the-perch-ui-creating-a-pattern-library/" target="_blank">The source of truth</a>"</h2>
+					<h3 class="fragment">aka. "<a href="https://clearleft.com/posts/the-living-component-library" target="_blank">The Living Component Library</a>"</h3>
+					<aside class="notes">
+						<p>Let's make Fractal "the source of truth" for the markup.</p>
+						<ul>
+							<li><a href="https://rachelandrew.co.uk/archives/2016/05/06/rebuilding-the-perch-ui-creating-a-pattern-library/">Rachel Andrew mentions "source of truth" in her talk about redesigning Perch CMS using Fractal</a></li>
+							<li><a href="https://rachelandrew.co.uk/archives/2017/07/28/perch-patterns-and-old-browsers/">Rachel Andrew's talk at Patterns Day 2017</a></li>
+							<li><a href="http://patterns.perchcms.com/">Perch CMS UI Pattern Library</a></li>
+						</ul>
+					</aside>
+				</section>
+
+				<section id="means-to-an-end" data-background-image="assets/img/skyline.png">
+					<h2>Means to an end</h2>
+					<aside class="notes">
+						<p>I'm not here to sell you Fractal per se, but to seed the idea that the concerns of the front-end can be separated from the CMS implementation.</p>
+						<p>If you want to find out more about Fractal, <a href="https://fractal.build/">visit the website</a>.</p>
+					</aside>
+				</section>
+
+				<section id="but-how-2" data-background-image="assets/img/thinking.png">
+					<h2>But how? <small class="fragment">(part 2)</small></h2>
+					<ul>
+						<li class="fragment">What is the page layout, content design?</li>
+						<li class="fragment">How would we make the view-models?</li>
+						<li class="fragment">How would we render the Handlebars templates?</li>
+					</ul>
+					<aside class="notes">
+						<p>Go back to the Fractal UI, show the layout of the pages.</p>
+						<p>How the modules are single-column stacked.</p>
+						<p>This influenced our Umbraco implementation - using Stacked Content.</p>
+						<p>If it was a multi-column layout, we’d use the Grid, (along with DTGE).</p>
+					</aside>
+				</section>
+
+				<section id="demo-umbraco" data-background-image="assets/img/umbraco-cupcakes.png">
+					<h2>Umbraco Demo</h2>
+					<aside class="notes">
+<!--
+// Following the blog post, I exported all the components out from Fractal, copied them over to Umbraco and figured out how to do all the plumbing.
+// Using Ditto to populate the view-models.  I created the view-models by taking the JSON from Fractal, and using VS's "Paste JSON as Classes" feature, then a little tidyup.
+// Our controller would convert the IPublishedContent to the view-model (via Ditto) and pass it to the Handlebars view-engine.
+
+>> Umbraco is responsible for generating JSON
+
+// There was a LOT of research into how to do this - so much research!
+// In Umbraco, I used Stacked Content to build up the page modules.  If the website had multi-columns, then I'd most likely use the Grid.
+// Luckily Stacked Content returns its data as a collection of IPublishedContent, so super easy for Ditto to do its thing!
+-->
+						<p>Show the templates, how the stacked modules would work.</p>
+						<p>Talk a little about Handlebars.js - and woes of support in .NET land.</p>
+						<p>Show the controller, how everything is routed through a base controller.</p>
+						<p>Talk about Ditto. Show the JSON output.</p>
+					</aside>
+				</section>
+
+				<section id="lessons-learnt" data-background-image="assets/img/bart-simpson-chalkboard.png">
+					<h2>Lessons learnt</h2>
+					<aside class="notes">
+						<p>Successes - Separation of concerns, the frontend team are wholly responsible for the frontend - there should be zero mis-implementations.</p>
+						<p>Failures - JS render time isn’t great, it's never going to be a fast as Razor (never - as it's interpreted JS at runtime).  There's no "quick-fix" hacking of templates. Everything HAS to be in Fractal, warts and all.</p>
+					</aside>
+				</section>
+
+				<section id="end" data-background-image="assets/img/fraggle-rock-gorgs-chase.png">
+					<h1>THE END</h1>
+					<p>Any questions?</p>
+					<p><a href="https://twitter.com/leekelleher">@leekelleher</a></p>
+					<p><a href="https://leekelleher.github.io/umbraco-talks/" target="_blank">leekelleher.github.io/umbraco-talks</a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
