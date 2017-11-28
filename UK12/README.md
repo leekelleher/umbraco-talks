@@ -1,6 +1,6 @@
 # Umbraco UK Festival 2012
 
-http://2012.umbracoukfestival.co.uk/speakers/#lee-kelleher
+<http://2012.umbracoukfestival.co.uk/speakers/#lee-kelleher>
 
 ## uComponents
 
@@ -22,7 +22,7 @@ uComponents is one of the most popular packages for Umbraco, in this session, yo
 
 ### Video
 
-http://www.youtube.com/embed/bwsIFmC5NAE
+<http://www.youtube.com/embed/bwsIFmC5NAE>
 
 
 ## Credits

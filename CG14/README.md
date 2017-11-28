@@ -2,7 +2,7 @@
 
 ## 500 brands, Umbraco-as-a-Service... that calls for a Carlsberg!
 
-http://www.codegarden14.com/sessions/500-brands-umbraco-as-a-service-that-calls-for-a-carlsberg/
+<http://www.codegarden14.com/sessions/500-brands-umbraco-as-a-service-that-calls-for-a-carlsberg/>
 
 ### The Session
 

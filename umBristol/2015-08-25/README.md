@@ -2,7 +2,7 @@
 
 ## umBristol Talks - August 2015
 
-http://www.meetup.com/umBristol/events/223807592/
+<http://www.meetup.com/umBristol/events/223807592/>
 
 ### Introduction
 

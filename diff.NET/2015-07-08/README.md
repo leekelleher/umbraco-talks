@@ -2,7 +2,7 @@
 
 ## Umbraco 101
 
-http://www.meetup.com/diff-NET/events/220703996/
+<http://www.meetup.com/diff-NET/events/220703996/>
 
 ### The Session
 
