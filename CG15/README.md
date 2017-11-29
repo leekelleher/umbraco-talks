@@ -2,7 +2,7 @@
 
 ## How To Develop A Killer Package
 
-http://www.codegarden15.com/sessions/how-to-develop-a-killer-package/
+<http://www.codegarden15.com/sessions/how-to-develop-a-killer-package/>
 
 ### The Session
 

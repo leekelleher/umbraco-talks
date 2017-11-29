@@ -1,6 +1,6 @@
 # Umbraco UK Festival 2010
 
-http://2010.umbracoukfestival.co.uk/
+<http://2010.umbracoukfestival.co.uk/>
 
 ## Introduction to uComponents
 
@@ -10,4 +10,4 @@ Lee Kelleher is a freelance ASP.NET developer from Liverpool, (now based near Br
 
 ### Video
 
-http://2010.umbracoukfestival.co.uk/lee-kelleher.aspx
+<http://2010.umbracoukfestival.co.uk/lee-kelleher.aspx>
