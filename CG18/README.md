@@ -27,4 +27,4 @@ Marc Goodson is a multiple Umbraco MVP award winner, he has developed numerous u
 
 ### The Slides
 
-The slides are available here as a PDF export (from Powerpoint): <codegarden-2018-atomic-design-in-umbraco.pdf>
+The slides are available here as a PDF export (from Powerpoint): <https://leekelleher.github.io/umbraco-talks/CG18/codegarden-2018-atomic-design-in-umbraco.pdf>
