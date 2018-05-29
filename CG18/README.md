@@ -15,7 +15,7 @@ How does this relate to your friendly CMS? Can we take the principles of "atomic
 
 Is it time to ditch your trusty starter kit, and break things down a bit more? Have the front-end cool kids got a point?
 
-This session will guide you through the concepts of atomic design, adopting a pattern-based ‘scientific’ process to establish a better workflow, creating a shared vocabulary for your team, and leading to simpler, easier to maintain, astonishingly neat Umbraco implementations.
+This session will guide you through the concepts of atomic design, adopting a pattern-based scientific process to establish a better workflow, creating a shared vocabulary for your team, and leading to simpler, easier to maintain, astonishingly neat Umbraco implementations.
 
 
 ### The Speakers
