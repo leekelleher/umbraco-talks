@@ -28,3 +28,7 @@ Marc Goodson is a multiple Umbraco MVP award winner, he has developed numerous u
 ### The Slides
 
 The slides are available here as a PDF export (from Powerpoint): <https://leekelleher.github.io/umbraco-talks/CG18/codegarden-2018-atomic-design-in-umbraco.pdf>
+
+### Periodic Table
+
+...and finally, it's the thing that you've all been asking for... the [Periodic Table of Umbraco core Property Editors](https://leekelleher.github.io/umbraco-talks/CG18/periodic-table.html)!

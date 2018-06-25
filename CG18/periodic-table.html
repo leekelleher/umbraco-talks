@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Umbraco Periodic Table</title>
+	<style type="text/css">.cell,.periodic{position:relative}.periodic{margin:20px -2px 20px 20px;font-family:Arial;height:800px;line-height:normal}.periodic-row{clear:both;height:14%}.heading-row{clear:both;padding-bottom:2%}.heading-row .cell{font-weight:700;text-align:center}.cell{float:left;width:9.09%;height:100%}.element,.symbol{position:absolute}.element{top:0;left:0;bottom:2px;right:2px;box-sizing:border-box;border:1px solid #000;text-align:left;cursor:default;pointer-events:none;-webkit-transition:all .2s ease;transition:all .2s ease;background-color:#000}.at_details,.at_num{position:absolute;color:#000;font-size:14px;opacity:1}.at_num{top:4px;right:5px}.symbol{top:50%;left:4px;right:0;color:#000;margin-top:-20px;font-weight:700;line-height:30px;height:30px;font-size:40px}.at_details{bottom:4px;left:4px;right:0}.bool .element{background-color:#f0ff8f}.numeric .element{background-color:#f66}.date .element{background-color:#ffdead}.text .element{background-color:#ffbfff}.html .element{background-color:#f9c}.json .element{background-color:#ffc0c0}.meta .element{background-color:#ccc}.other .element{background-color:#c0ffff}.community .element{display:none}</style>
+</head>
+<body>
+	<div class="periodic">
+		<div class="heading-row">
+			<div class="cell">Numeric</div>
+			<div class="cell">Date/Time</div>
+			<div class="cell" style="width:27.27%;">Text</div>
+			<div class="cell">HTML</div>
+			<div class="cell">JSON</div>
+			<div class="cell" style="width:18.18%;">Meta</div>
+			<div class="cell">List</div>
+		</div>
+		<div class="periodic-row">
+			<div class="cell bool">
+				<div class="element">
+					<div class="at_num">1</div>
+					<div class="symbol">Tf</div>
+					<div class="at_details">True/False<br />1.008</div>
+				</div>
+			</div>
+			<div class="cell date"></div>
+			<div class="cell text"></div>
+			<div class="cell text"></div>
+			<div class="cell text"></div>
+			<div class="cell html"></div>
+			<div class="cell json"></div>
+			<div class="cell meta"></div>
+			<div class="cell meta"></div>
+			<div class="cell other">
+				<div class="element">
+					<div class="at_num">2</div>
+					<div class="symbol">Lb</div>
+					<div class="at_details">Label<br />4.0026</div>
+				</div>
+			</div>
+		</div>
+		<div class="periodic-row">
+			<div class="cell numeric">
+				<div class="element">
+					<div class="at_num">3</div>
+					<div class="symbol">Nu</div>
+					<div class="at_details">Numeric<br />6.94</div>
+				</div>
+			</div>
+			<div class="cell date">
+				<div class="element">
+					<div class="at_num">4</div>
+					<div class="symbol">D</div>
+					<div class="at_details">Date<br />9.0122</div>
+				</div>
+			</div>
+			<div class="cell text">
+				<div class="element">
+					<div class="at_num">48</div>
+					<div class="symbol">Tb</div>
+					<div class="at_details">Textbox<br />112.411</div>
+				</div>
+			</div>
+			<div class="cell text"></div>
+			<div class="cell text"></div>
+			<div class="cell html"></div>
+			<div class="cell json">
+				<div class="element">
+					<div class="at_num">52</div>
+					<div class="symbol">Rt</div>
+					<div class="at_details">Repeatable textstrings<br />19.19</div>
+				</div>
+			</div>
+			<div class="cell meta">
+				<div class="element">
+					<div class="at_num">5</div>
+					<div class="symbol">Cp</div>
+					<div class="at_details">Content Picker<br />10.81</div>
+				</div>
+			</div>
+			<div class="cell meta"></div>
+			<div class="cell other community">
+				<div class="element">
+					<div class="at_num">10</div>
+					<div class="symbol">Ed</div>
+					<div class="at_details">Editor Notes<br />20.180</div>
+				</div>
+			</div>
+		</div>
+		<div class="periodic-row">
+			<div class="cell numeric">
+				<div class="element">
+					<div class="at_num">11</div>
+					<div class="symbol">Dc</div>
+					<div class="at_details">Decimal<br />22.990</div>
+				</div>
+			</div>
+			<div class="cell date">
+				<div class="element">
+					<div class="at_num">12</div>
+					<div class="symbol">Dt</div>
+					<div class="at_details">Date/Time<br />24.305</div>
+				</div>
+			</div>
+			<div class="cell text">
+				<div class="element">
+					<div class="at_num">14</div>
+					<div class="symbol">Em</div>
+					<div class="at_details">Email address<br />28.085</div>
+				</div>
+			</div>
+			<div class="cell text"></div>
+			<div class="cell text"></div>
+			<div class="cell html"></div>
+			<div class="cell json">
+				<div class="element">
+					<div class="at_num">18</div>
+					<div class="symbol">Rl</div>
+					<div class="at_details">Related Links<br />39.948</div>
+				</div>
+			</div>
+			<div class="cell meta">
+				<div class="element">
+					<div class="at_num">13</div>
+					<div class="symbol">Mg</div>
+					<div class="at_details">Member Group Picker<br />26.982</div>
+				</div>
+			</div>
+			<div class="cell meta">
+				<div class="element">
+					<div class="at_num">31</div>
+					<div class="symbol">Mm</div>
+					<div class="at_details">Member Picker<br />69.723</div>
+				</div>
+			</div>
+			<div class="cell other"></div>
+		</div>
+		<div class="periodic-row">
+			<div class="cell numeric"></div>
+			<div class="cell date"></div>
+			<div class="cell text">
+				<div class="element">
+					<div class="at_num">21</div>
+					<div class="symbol">Tx</div>
+					<div class="at_details">Textarea<br />44.956</div>
+				</div>
+			</div>
+			<div class="cell text"></div>
+			<div class="cell text"></div>
+			<div class="cell html">
+				<div class="element">
+					<div class="at_num">27</div>
+					<div class="symbol">Md</div>
+					<div class="at_details">Markdown editor<br />58.933</div>
+				</div>
+			</div>
+			<div class="cell json"></div>
+			<div class="cell meta">
+				<div class="element">
+					<div class="at_num">31</div>
+					<div class="symbol">Up</div>
+					<div class="at_details">User picker<br />69.723</div>
+				</div>
+			</div>
+			<div class="cell meta"></div>
+			<div class="cell other"></div>
+		</div>
+		<div class="periodic-row">
+			<div class="cell numeric"></div>
+			<div class="cell date"></div>
+			<div class="cell text"></div>
+			<div class="cell text"></div>
+			<div class="cell text"></div>
+			<div class="cell html">
+				<div class="element">
+					<div class="at_num">55</div>
+					<div class="symbol">Rte</div>
+					<div class="at_details">Rich Text Editor<br />132.91</div>
+				</div>
+			</div>
+			<div class="cell json">
+				<div class="element">
+					<div class="at_num">56</div>
+					<div class="symbol">Gr</div>
+					<div class="at_details">Grid Layout<br />137.33</div>
+				</div>
+			</div>
+			<div class="cell meta community">
+				<div class="element">
+					<div class="at_num">49</div>
+					<div class="symbol">Rjp</div>
+					<div class="at_details">Multi-Url Picker<br />114.82</div>
+				</div>
+			</div>
+			<div class="cell meta"></div>
+			<div class="cell other"></div>
+		</div>
+		<div class="periodic-row">
+			<div class="cell numeric"></div>
+			<div class="cell date"></div>
+			<div class="cell text">
+				<div class="element">
+					<div class="at_num">57</div>
+					<div class="symbol">Dd</div>
+					<div class="at_details">Dropdown<br />138.91</div>
+				</div>
+			</div>
+			<div class="cell text">
+				<div class="element">
+					<div class="at_num">58</div>
+					<div class="symbol">Ch</div>
+					<div class="at_details">Checkbox List<br />140.12</div>
+				</div>
+			</div>
+			<div class="cell text">
+				<div class="element">
+					<div class="at_num">59</div>
+					<div class="symbol">Rb</div>
+					<div class="at_details">Radio Button List<br />140.91</div>
+				</div>
+			</div>
+			<div class="cell html"></div>
+			<div class="cell json">
+				<div class="element">
+					<div class="at_num">47</div>
+					<div class="symbol">Ic</div>
+					<div class="at_details">Image Cropper<br />107.87</div>
+				</div>
+			</div>
+			<div class="cell meta">
+				<div class="element">
+					<div class="at_num">83</div>
+					<div class="symbol">Mp</div>
+					<div class="at_details">Media Picker<br />208.98</div>
+				</div>
+			</div>
+			<div class="cell meta">
+				<div class="element">
+					<div class="at_num">84</div>
+					<div class="symbol">Mntp</div>
+					<div class="at_details">Multinode Treepicker<br />[209]</div>
+				</div>
+			</div>
+			<div class="cell other">
+				<div class="element">
+					<div class="at_num">86</div>
+					<div class="symbol">Lv</div>
+					<div class="at_details">List view<br />[222]</div>
+				</div>
+			</div>
+		</div>
+		<div class="periodic-row">
+			<div class="cell numeric">
+				<div class="element">
+					<div class="at_num">87</div>
+					<div class="symbol">S</div>
+					<div class="at_details">Slider<br />[223]</div>
+				</div>
+			</div>
+			<div class="cell date"></div>
+			<div class="cell text">
+				<div class="element">
+					<div class="at_num">89</div>
+					<div class="symbol">Fu</div>
+					<div class="at_details">File Upload<br />[227]</div>
+				</div>
+			</div>
+			<div class="cell text">
+				<div class="element">
+					<div class="at_num">90</div>
+					<div class="symbol">Co</div>
+					<div class="at_details">Color Picker<br />232.04</div>
+				</div>
+			</div>
+			<div class="cell text"></div>
+			<div class="cell html"></div>
+			<div class="cell json">
+				<div class="element">
+					<div class="at_num">79</div>
+					<div class="symbol">Nc</div>
+					<div class="at_details">Nested Content<br />196.97</div>
+				</div>
+			</div>
+			<div class="cell meta">
+				<div class="element">
+					<div class="at_num">112</div>
+					<div class="symbol">Tg</div>
+					<div class="at_details">Tags<br />[285]</div>
+				</div>
+			</div>
+			<div class="cell meta"></div>
+			<div class="cell other"></div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script>
+        $(".community").click(function () {
+            $('.element', this).toggle();
+        });
+    </script>
+</body>
+</html>
