@@ -1,0 +1,825 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Don't Lose Your Head! The State of Decoupling Umbraco in 2019</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/umbrellainc.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<!-- data-state="[ bg-dark | bg-light | bg-purple | bg-pink | bg-blue | bg-yellow ]" -->
+
+				<section data-background-color="#000">
+					<img class="plain" data-src="lib/img/umbspark-presentation-landing-slide.png">
+					<aside class="notes">
+Say hi, then move onto the introduction.
+					</aside>
+				</section>
+				
+				<section data-state="bg-pink">
+					<h1>Hello!</h1>
+					<aside class="notes">
+Lee Kelleher<br>
+Doing Umbraco for the past 12 years<br>
+Umbrella<br>
+Gold Partner<br>
+x8 Umbraco MVP<br>
+Involved at many levels of the project<br><br>
+Released many plugins &amp; packages, (for v4, v5, v6, v7 ... v8? Ok, no v8, much to the dismay of my fellow Umbracians)<br><br>
+Contributed to Umbraco core code, (yup, even v8 code!)<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-yellow">
+					<h1>DON'T LOSE YOUR HEAD!</h1>
+					<h2>THE STATE OF DECOUPLING UMBRACO IN 2019</h2>
+					<aside class="notes">
+Today, we have a variety of options for architecting our Umbraco solutions,
+(in terms of this talk, these would be typically Coupled to Decoupled).<br>
+<br>
+How do you decide which is the best for your next Umbraco project?<br>
+<br>
+Whether that would be a regular website, multi-tenancy website, mobile app, chatbots, kiosks, voice skills, or a combination of any of those.<br>
+<br>
+We'll be exploring the pros &amp; cons for each of these approaches,<br>
+to help you make an informed decision on which to choose, based on your <b>project's requirements</b>, <b>developer skill-set</b>, <b>editorial needs</b> and <b>future-proofing</b>.
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h1>"Going Headless"</h1>
+					<aside class="notes">
+The current industry trend is pushing us towards “going headless”, without any real justification.<br>
+<br>
+Clients are starting to throw “headless” into their requirements,<br>
+whether that’s a suitable solution for them or they are trying to appease a tech exec, or are they are playing buzzword bingo?<br>
+<br>
+<b>I mean, who'd play buzzword bingo?</b><br>
+<br>
+I'd get frustrated with arbitrary requests for “headless”.<br>
+<br>
+I wanted to challenge the assumptions and come back concrete reasons for selecting headless over a more traditional approach.
+					</aside>
+				</section>
+				
+				<section data-state="bg-purple">
+					<h2>We have a lot to<br>consider these days...</h2>
+					<aside class="notes">
+When we think about the capabilities of Umbraco, we can see its potential expand beyond traditional websites.<br>
+<br>
+We've seen that Umbraco has the ability to power many digital experiences, such as...
+					</aside>
+				</section>
+				
+				<section data-state="bg-light" data-background="lib/img/channels-digital-signage.jpg">
+					<h2>
+						<span style="background-color:#f3f1f3; padding:5px 10px;">Digital Signage</span>
+					</h2>
+					<aside class="notes">
+Kevin Giszewski tweeted this, that he developed back in 2016.<br>
+https://twitter.com/kevingiszewski/status/714778829093470209
+					</aside>
+				</section>
+				
+				<section data-state="bg-pink" data-background="lib/img/channels-kiosk.jpg">
+					<h2>
+						<span style="background-color:#e84480; padding:5px 10px;">Interactive Kiosks</span>
+					</h2>
+					<aside class="notes">
+This a quiz kiosk at the EU Council.<br>
+https://twitter.com/simonech/status/1020274096561709056
+					</aside>
+				</section>
+				
+				<section data-state="bg-yellow" data-background="lib/img/channels-telephone-systems.png">
+					<h2>
+						<span style="background-color:#fcc310; padding:5px 10px;">Telephone Systems</span>
+					</h2>
+					<aside class="notes">
+Bristol agency, Mayfly Media, with Emma Garland, did a talk about this at CG15.<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-purple" data-background="lib/img/channels-chatbots.png">
+					<h2>
+						<span style="background-color:#7562a7; padding:5px 10px;">Chatbots</span>
+					</h2>
+					<h3>
+						<span style="background-color:#7562a7; padding:5px 10px;">Facebook Messenger, WhatsApp</span>
+					</h3>
+					<br><br><br><br><br><br><br><br><br><br>
+					<aside class="notes">
+https://codegarden18.com/sessions/intelligent-bots-with-headless-umbraco/
+					</aside>
+				</section>
+				
+				<section data-state="bg-pink" data-background="lib/img/channels-voice.jpg">
+					<h2>
+						<span style="background-color:#e84480; padding:5px 10px;">Conversational Interfaces</span>
+					</h2>
+					<h3>
+						<span style="background-color:#e84480; padding:5px 10px;">Amazon Echo, Google Home</span>
+					</h3>
+					<br><br><br><br><br><br><br><br>
+					<aside class="notes">
+Carole Logan regularly demos Alexa skills powered by Umbraco.<br>
+<br>
+Gold Partner, Perplex in The Netherlands integrated Umbraco with Google Home.
+					</aside>
+				</section>
+				
+				<section data-state="bg-yellow" data-background="lib/img/channels-virtual-reality.png">
+					<h2>
+						<span style="background-color:#fcc310; padding:5px 10px;">Virtual Reality</span>
+					</h2>
+					<br><br><br><br><br><br><br><br>
+					<aside class="notes">
+Mike Masey wrote an article on 24 Days in 2017, on pulling Umbraco content into Virtual Reality, WebVR app.
+https://24days.in/umbraco-cms/2017/virtual-umbrality/
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue" data-background-video="lib/img/fight-club-ikea.mp4" data-background-video-loop="true" data-background-video-muted="true">
+					<h2>
+						<span style="background-color:#4dbed5; padding:5px 10px;">Augmented Reality</span>
+					</h2>
+					<br><br><br><br><br><br><br><br>
+					<aside class="notes">
+Of course, this is a clip from Fight Club, but it shows the potential of pulling Umbraco content into Augmented Reality.<br>
+<br>
+Ultimately there's an untapped market exploring the possibilities of the Internet of Things!
+					</aside>
+				</section>
+				
+				<section data-state="bg-yellow">
+					<h2>What are our<br>architecture options?</h2>
+					<h1 class="fragment fade-in">COUPLED</h1>
+					<h1 class="fragment fade-in">DECOUPLED</h1>
+					<aside class="notes">
+What are our architecture options?<br>
+<br>
+The common approaches are: Coupled and Decoupled… with everything in between.
+					</aside>
+				</section>
+				
+				<section data-state="bg-purple">
+					<h1>What is Coupled?</h1>
+					<img class="fragment fade-in plain" data-src="lib/img/architecture-coupled.png">
+					<aside class="notes">
+Coupled would be the traditional single-server approach for housing both website front-end and CMS back-end.
+					</aside>
+				</section>
+
+				<section data-state="bg-blue" data-transition="slide-in fade-out">
+					<h1>What is Decoupled?</h1>
+					<img class="fragment fade-in plain" data-src="lib/img/architecture-decoupled.png">
+					<aside class="notes">
+Whereas decoupled would be to separate concerns by detaching the front-end from the back-end, a la headless.<br>
+<br>
+Decoupled could be thought of as a single category, that reflects a full separation of concerns between the presentation layer and all other aspects of the CMS.<br>
+<br>
+The CMS would become a content repository (data provider), with (typically) a server-side application, responsible for rendering all the markup, and communicating with Umbraco via web service APIs, and pushing out to further channels.<br>
+<br>
+The assumption here is that the <b>front-end = web</b> and <b>back-end = CMS.</b><br>
+					</aside>
+				</section>
+
+				<section data-state="bg-blue" data-transition="fade-in slide-out">
+					<h1>What is Decoupled?</h1>
+					<img class="plain" data-src="lib/img/architecture-headless.png">
+					<aside class="notes">
+When now... Front-end can be web, mobile apps, AMP, screen readers, XBox, Smart TVs, Alexa<br>
+<br>
+All of these front-ends should be 1st Class Citizens ... moving away from the mindset that the Website will power other channels.
+					</aside>
+				</section>
+			
+				<section data-state="bg-light">
+					<h1>Breaking it down</h1>
+					<h3 class="fragment fade-in">HYBRID, PROGRESSIVELY DECOUPLED</h3>
+					<h3 class="fragment fade-in">FULLY DECOUPLED STATIC</h3>
+					<h3 class="fragment fade-in">FULLY DECOUPLED HEADLESS</h3>
+					<aside class="notes">
+The area of “Decoupled” can be broken down into further options...<br>
+<br>
+Hybrid, Progressively Decoupled Umbraco<br>
+Fully decoupled static site (e.g. has presentation layer)<br>
+Fully decoupled app (e.g. 100% headless, zero concept of presentation layer)<br>
+<br>
+These are a spectrum, on one side you have hybrid (left) with headless on the opposite end, we’ll go into detail in a moment.<br>
+<br>
+These approaches depend on varying preferences and requirements.<br>
+<br>
+What does this mean in terms of Umbraco?
+					</aside>
+				</section>
+				
+				<section data-state="bg-yellow">
+					<h1>Coupled</h1>
+					<h2>Traditional Umbraco</h2>
+					<img class="plain" data-src="lib/img/architecture-coupled.png">
+					<aside class="notes">
+Coupled. This is Traditional Umbraco as is. CMS and website all in one place, rendering all the markup.<br>
+<br>
+All of Umbraco's usual responsibilities stay intact. Umbraco as a monolithic system, remains in complete control over the presentation and content repository.
+					</aside>
+				</section>
+				
+				<section data-state="bg-pink">
+					<h1>Hybrid</h1>
+					<h2>Progressively Decoupled Umbraco</h2>
+					<img class="plain" data-src="lib/img/architecture-hybrid.png">
+					<aside class="notes">
+Progressively Decoupled. From an infrastructure perspective, this is the same as Coupled, single-server running CMS and frontend.<br>
+<br>
+With a slight difference… Umbraco is used for rendering minimal markup, with a JavaScript “framework” layered on top to populate content, (e.g. using APIs to query the CMS).<br>
+<br>
+Why do this? Research has been done into load-times and the performance perception of user-experiences for interactive websites.<br>
+<br>
+The technique is to use JavaScript for rendering parts of a page (anything from a single component, to the entire body content), in order to achieve faster (perceived) load times and responses.<br>
+<br>
+An example of this, Facebook have an approach called BigPipe to pipeline parts of their webpages asynchronously.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Facebook BigPipe</h1>
+					<img class="plain" data-src="lib/img/facebook-bigpipe.jpg">
+					<aside class="notes">
+An example of this, Facebook have an approach called BigPipe to pipeline parts of their webpages asynchronously.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Full Decoupled<br>Static Sites</h1>
+					<img class="plain" data-src="lib/img/architecture-static.png">
+					<aside class="notes">
+Fully decoupled static site.<br>
+<br>
+Use Umbraco as a content repository for a static site generator,<br>
+<br>
+Static sites can offer improved performance, security, and reduced complexity for developers.<br>
+<br>
+Static site generators like Gatsby would retrieve content from Umbraco, generate a static website, and deploy that static site to a CDN, usually through a specialized cloud provider such as Netlify.<br>
+<br>
+The approach is gaining traction as a concept called the JAMstack!
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>JAMstack?</h1>
+					<img class="plain" data-src="lib/img/logo-jamstack.png">
+					<aside class="notes">
+JAMstack is an emerging tech stack, it represents...<br>
+<br>
+JavaScript, APIs, Markup
+<br>
+Individually, these aren’t nothing new, but together this new concept enables fully decoupled static sites.<br>
+<br>
+We're going to hear a lot more about JAMstack during the next 12 months.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Full Decoupled<br>Headless</h1>
+					<img class="plain" data-src="lib/img/architecture-headless.png">
+					<aside class="notes">
+Fully decoupled app.<br>
+<br>
+Use Umbraco as a content repository to be accessed by channels and other consumers.<br>
+<br>
+In marketing, this is referred to by other names: Web Service APIs, content-as-a-service ... Umbraco will offer their Umbraco Headless product soon.<br>
+<br>
+Umbraco has no knowledge of presentation layer, it's a data provider.
+					</aside>
+				</section>
+				
+				<section data-state="bg-dark">
+					<h2>What's the different<br>in decoupling?</h2>
+					<img class="fragment fade-in plain" data-src="lib/img/architecture-pushvspull.png">
+					<aside class="notes">
+For the purposes of this talk,<br>
+<br>
+Decoupled would a content push, out from the CMS<br>
+<br>
+Whereas Headless would pull content from the CMS when requested<br>
+<br>
+A push vs a pull.
+					</aside>
+				</section>
+				
+				<section data-state="bg-pink">
+					<h2>What are the advantages<br>to each approach?</h2>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Advantages of Coupled</h1>
+					<ul>
+						<li class="fragment fade-in">Established. What we already know.</li>
+						<li class="fragment fade-in">All Umbraco features out-of-the-box</li>
+						<li class="fragment fade-in">Previewing, URL management, etc</li>
+						<li class="fragment fade-in">Content tree/structure drives website</li>
+					</ul>
+					<aside class="notes">
+Traditional Umbraco remains an excellent choice for editors who need full control over the visual elements on the page, with access to features such as layout (Grid), templating (if brave), previewing and URL management.<br>
+<br>
+This is Umbraco as we have known it all along. The benefits are real, has value for clients.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Advantages of Hybrid</h1>
+					<ul>
+						<li class="fragment fade-in">Same as Coupled</li>
+						<li class="fragment fade-in">Performance gains</li>
+						<li class="fragment fade-in">Steps towards Decoupling (mindset)</li>
+					</ul>
+					<aside class="notes">
+This is still how most new content management projects are built.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Advantages of Decoupled</h1>
+					<h3 class="fragment fade-in">(in general)</h3>
+					<ul>
+						<li class="fragment fade-in">Clean, accessible and scaleable APIs</li>
+						<li class="fragment fade-in">Separation of upgrades (from CMS)</li>
+						<li class="fragment fade-in">Separation of channel redesigns</li>
+						<li class="fragment fade-in">Less reliance on Umbraco specialists</li>
+						<li class="fragment fade-in">Adopt cutting-edge frontend technologies</li>
+					</ul>
+					<aside class="notes">
+Clean APIs:<br>
+Publish to many frontends and experiences simultaneously.<br>
+Integrate multiple backends or services (a la Microservices)<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Advantages of<br>Decoupled Static</h1>
+					<ul>
+						<li class="fragment fade-in">Static, secure, CDN</li>
+						<li class="fragment fade-in">Reproducible, repeatable</li>
+						<li class="fragment fade-in">Technology choices</li>
+						<li class="fragment fade-in">Cheap hosting</li>
+					</ul>
+					<aside class="notes">
+If your static site is compromised, then it can be nuked and re-deployed.<br>
+<br>
+Technology choices:<br>
+in Ruby land, choose Jekyll<br>
+in JS land, chooose Gatsby, or MetalSmith<br>
+in .NET land, we have a generator called Wyam.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Advantages of Headless</h1>
+					<ul>
+						<li class="fragment fade-in">True separation of concerns</li>
+						<li class="fragment fade-in">Multi-channel</li>
+						<li class="fragment fade-in">Future proof</li>
+					</ul>
+					<aside class="notes">
+Content comes first ... modern CMSs tend to manage websites first, and content second.<br>
+<br>
+Future-proof: We don't know what new tech will emerge, but we can assume that it'll use our APIs.
+					</aside>
+				</section>
+				
+				<section data-state="bg-pink">
+					<h2>What are the disadvantages<br>to each approach?</h2>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Disadvantages of Coupled</h1>
+					<ul>
+						<li class="fragment fade-in">Hosting, memory, costs</li>
+						<li class="fragment fade-in">Developer skill-set</li>
+						<li class="fragment fade-in">Razor templating only</li>
+					</ul>
+					<aside class="notes">
+.NET hosting generally costs more. With cloud, say Azure, high memory usage is heavily frowned upon.<br>
+Generally a small-ish Umbraco site would run around 500Mb of memory. Which would increase with more content.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Disadvantages of Hybrid</h1>
+					<ul>
+						<li class="fragment fade-in">Same as Coupled</li>
+						<li class="fragment fade-in">Team size and skill-sets (both .NET and JS)</li>
+					</ul>
+					<aside class="notes">
+In terms of team skills, with Progressively Decoupled, you may need a dedicated JavaScript developer.<br>
+So this would increase your team size, (and costs)<br>
+<br>
+From an Editors perspective, the less of the page dedicated to JavaScript, the more they can control the page through Umbraco Grid (or Stacked Content) capabilities.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Disadvantages of Decoupled</h1>
+					<h3 class="fragment fade-in">(in general)</h3>
+					<ul>
+						<li class="fragment fade-in">Monolithic becomes Polylithic</li>
+						<li class="fragment fade-in">Umbraco out-of-the-box functionality only works for the back-end</li>
+						<li class="fragment fade-in">The minimum team size is higher for eff<!--#-->icient development</li>
+						<li class="fragment fade-in">Needs organisational buy-in</li>
+					</ul>
+					<aside class="notes">
+Monolithic: From a DevOps perspective, a single system is now a web of systems. More to manage and maintain.<br>
+<br>
+Team: Same as Hybrid, you need diverse skills in your team.<br>
+<br>
+Organisation: Your customer/organisation needs to have buy-in from the start, otherwise it can lead to confusion in the maintenance phase, when their mindset was with Traditional. They'd expect the one-person "webmaster" support. 
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Disadvantages of Decoupled Static</h1>
+					<ul>
+						<li class="fragment fade-in">Lose built-in previewing</li>
+						<li class="fragment fade-in">Lose built-in templating</li>
+						<li class="fragment fade-in">Potential disconnect from Content structure</li>
+						<li class="fragment fade-in">Dynamic features, e.g. forms/membership</li>
+					</ul>
+					<aside class="notes">
+If accustom to Umbraco's built-in features, then losing them is a major disadvantage.<br>
+<br>
+Dynamc features, such as form submissions, membership login, and search functionality require further development.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Disadvantages of Headless</h1>
+					<ul>
+						<li class="fragment fade-in">Same as Decoupled</li>
+						<li class="fragment fade-in">Further disconnect from Editors</li>
+					</ul>
+					<aside class="notes">
+Disconnect: In terms of rich content, a non-CMS dev would prefer a flat "poor" model, e.g. key/value pairs.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>How do we decide?</h1>
+					<h2>Let's look at the scenarios...</h2>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-state="bg-dark">
+					<img class="stretch plain" data-src="lib/img/choices-cereal-black-mirror.jpg">
+					<aside class="notes">
+Who'd have thought a simple choice was so difficult?
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h2>What do you<br>intend to build?</h2>
+					<img class="stretch plain" data-src="lib/img/flowchart-full.png">
+					<aside class="notes">
+Ask the question "What do you intend to build?"<br>
+<br>
+These questions have already been posed within other CMS communities.
+In the Drupal community, I found a blog post by Drupal founder, who had this flow chart.<br>
+(Of course, for the sake of keeping the peace, I've hidden references of Drupal.<br>
+<br>
+https://dri.es/how-to-decouple-drupal-in-2019
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h2>One experience<br>or multiple experiences?</h2>
+					<img class="stretch plain" data-src="lib/img/flowchart-top-1.png">
+					<aside class="notes">
+When we talk about “experiences”, what do we mean?<br>
+<br>
+In general terms, these can be considered channels, e.g. web, mobile, social, chat, kiosk, voice
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h2>Is there a<br>website/web-app?</h2>
+					<img class="stretch plain" data-src="lib/img/flowchart-top-2.png">
+					<aside class="notes">
+Regardless whether it’s one or multiple experiences, ask the question “Will there be a website or web application?”
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h2>If No,<br>then...</h2>
+					<img class="stretch plain" data-src="lib/img/flowchart-top-3.png">
+					<aside class="notes">
+"No, Umbraco as a repository for non-web applications only"<br>
+<br>
+If your answer to the previous question was "No", then you should build a fully decoupled application, and your decision is complete.<br>
+<br>
+Mention powering an Alexa app, or chatbot
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h2>If Yes,<br>then...</h2>
+					<img class="stretch plain" data-src="lib/img/flowchart-top-4.png">
+					<aside class="notes">
+If your answer to the previous question was "Yes", then we'll need to raise the questions about Editor and Developer needs.
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h2>Building a<br>single web experiences</h2>
+					<img class="stretch plain" data-src="lib/img/flowchart-top-5.png">
+					<aside class="notes">
+You can decouple Umbraco, either as progressive or static decoupled. Depending how dynamic it needs to be.
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h2>Building<br>non-web experiences</h2>
+					<img class="stretch plain" data-src="lib/img/flowchart-top-6.png">
+					<aside class="notes">
+You can expose web-service APIs for content for native mobile, IoT.
+					</aside>
+				</section>
+				
+				<section data-state="bg-pink">
+					<h1>Umbraco can<br>support all these<br>use cases</h1>
+					<aside class="notes">
+What makes Umbraco so powerful is that it can support all of these use cases.<br>
+<br>
+In addition to technical requirements, organizational factors often come into play as well.<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-dark">
+					<h1>Evaluation process</h1>
+					<p>Are there things the<br>project cannot live without?</p>
+					<ul>
+						<li class="fragment fade-in">Editorial needs</li>
+						<li class="fragment fade-in">Developer needs</li>
+					</ul>
+					<aside class="notes">
+Are there things the project cannot live without?<br>
+<br>
+When deciding the architecture of an Umbraco website, you must assess the project requirements, from the perspective of both the Editor needs and the Developer needs.<br>
+<br>
+This is a critical step in your evaluation process to weigh the different advantages and disadvantages. Keeping in mind your customers/organization needs.<br>
+<br>
+It's important to remember that when editorial and marketing teams select a CMS, it's usually because of it's layout capabilities and rich editing functionality. Umbraco can offer editors the ability to control the layout in the browser, in terms of the Grid or Macros or the RTE.<br>
+<br>
+Bringing this to Decoupled would require further development effort.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h2>What can we live without?</h2>
+					<img class="stretch plain" data-src="lib/img/flowchart-middle-section.png">
+					<aside class="notes">
+Both editorial and developer needs are things that projects cannot live without,<br>
+and here are the questions you need to ask about your project:
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>What are the<br>Editors needs?</h1>
+					<ul>
+						<li class="fragment fade-in">Content Layout - Grid, RTE, Macros, Stacked Content</li>
+						<li class="fragment fade-in">Previews</li>
+						<li class="fragment fade-in">Templating, Macros</li>
+						<li class="fragment fade-in">Content tree, URL structure/management</li>
+						<li class="fragment fade-in">Accessibility (WAI-ARIA) of content</li>
+					</ul>
+					<aside class="notes">
+I've mentioned Umbraco's built-in features a few times now, but again, features such as templating, previewing, macros, content layout (Grid), domains, redirects / URL management, are all essential Editorial needs.<br>
+<br>
+Accessibility: This could be as simple as controling the ALT tags for an image.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>What are the<br>Developers needs?</h1>
+					<ul>
+						<li class="fragment fade-in">Control over visual presentation (instead of Editors)</li>
+						<li class="fragment fade-in">Templating skill-set</li>
+						<li class="fragment fade-in">Server-side rendering</li>
+						<li class="fragment fade-in">Build Tasks (bundling &amp; minif<!--#-->ication)</li>
+						<li class="fragment fade-in">Data from APIs (GraphQL)</li>
+						<li class="fragment fade-in">Security practices for those APIs</li>
+					</ul>
+					<aside class="notes">
+There could be a battle over control with the layout, maybe the Developer needs more control than the Editor?<br>
+<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h2>Let’s look at<br>our options...</h2>
+					<aside class="notes">
+Considering all these questions about things your project cannot live without, let’s look at the options for whether your requirements reflect the needs of the Editor or the Developer, or a mix of both.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Option 1</h1>
+					<h3>Requirements reflect purely editorial needs</h3>
+					<ul>
+						<li class="fragment fade-in">Will there be any user interactions?</li>
+						<li class="fragment fade-in">Access multiple data sources?</li>
+					</ul>
+					<aside class="notes">
+This leads to 2 further questions...<br>
+<br>
+If there are parts of the website that require user interactions with JavaScript?<br>
+This could be form submissions, member login, blog comments or even 'like' buttons.<br>
+<br>
+Will the website need to pull in content from multiple data source via an API?<br>
+This could be something like pulling in user-data from a CRM.
+<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>If Yes...</h1>
+					<h3>(to either question)</h3>
+					<h1 class="fragment fade-in">Progressively Decoupled</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>If No...</h1>
+					<h3>(to either question)</h3>
+					<h1 class="fragment fade-in">Coupled<br>Traditional Umbraco</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Option 2</h1>
+					<h3>Requirements reflect purely developer needs</h3>
+					<ul>
+						<li class="fragment fade-in">Is it a static website or dynamic web application?</li>
+					</ul>
+					<aside class="notes">
+Static or Dynamic?<br>
+<br>
+By Dynamic I mean, interactions, such as forms, membership, search, etc.<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>If Static...</h1>
+					<h1 class="fragment fade-in">Fully Decoupled<br>Static Site</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>If Dynamic...</h1>
+					<h1 class="fragment fade-in">Fully Decoupled<br>Headless</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Option 3</h1>
+					<h3>Requirements reflect both editorial and developer needs</h3>
+					<h1 class="fragment fade-in">Progressively Decoupled</h1>
+					<aside class="notes">
+If your answers show that your requirements reflect a mix of both editorial and developer needs,<br>
+you should consider a <b>Progressively Decoupled</b> implementation, and your decision is complete.<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Considerations</h1>
+					<h3>(if choosing any decoupled option)</h3>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h2>Frontend developers may not have Umbraco/CMS experience or knowledge</h2>
+					<aside class="notes">
+This can heavily influence the experience of the CMS. e.g. “Designed by a Developer”<br>
+<br>
+e.g. Think of the days before Nested Content, the CMS would have "Title 1", "Copy Text 1", "Title 2", "Copy Text 2", and so forth...
+					</aside>
+				</section>
+	
+				<section data-state="bg-light">
+					<h2>Who influences the CMS design/experience? Who dictates the richness of content?</h2>
+					<aside class="notes">
+Is it the client, or content-editor, or developer?<br>
+<br>
+Again, this becomes about control and who is willing to give up control to other the side?
+Developers had control as "webmasters", then CMSes have pushed control to content-editors, now developers are looking to take control back.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h2>Frontend developers would<br>opt for a simple 'model'</h2>
+					<h3>e.g. key/value data response</h3>
+					<aside class="notes">
+If you don't care about the Editor's experience, or are going to lose the richness of content, then why use Umbraco at all? Might as well be using WordPress.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>Important message</h1>
+					<h2>Don't forget the Editor experience</h2>
+					<aside class="notes">
+When choosing decoupled, please don’t forget the Editor experience!
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h2>Current and future trends</h2>
+					<h3>for Editor &amp; Developer complexities</h3>
+					<aside class="notes">
+We're seeing JavaScript frameworks become more complex, while static site generators have become less complex.<br>
+<br>
+Only a couple of years ago, we'd have seen a modern web developer boast about how they used React for their personal blog. Which ended up with 3 blog posts and an About page. Today, this would have more likely been done using a static site generator.<br>
+<br>
+Other considerations could be around workflows, in terms of build tasks and continuous integration.
+					</aside>
+				</section>
+				
+				<section data-state="bg-light">
+					<h1>We have choices</h1>
+					<h2>don't feel pressured</h2>
+					<aside class="notes">
+<b>Key takeaway:</b> We have choices, don't feel pressured into the latest trend. It’s OK to choose traditional Umbraco, with Progressively Decoupled.<br>
+<br>
+In the next few years, I'm sure we'll see further innovations with Decoupled architectures.<br>
+We may even see new products emerge that will solve many of the disadvantages (with each approach) that I've outlined today.					</aside>
+				</section>
+				
+				<section data-state="bg-purple">
+					<h3>Lee's Umbraco Innovation Talk<br>Bingo Card</h3>
+					<img class="stretch plain" data-src="lib/img/buzzword-bingo-card.png">
+					<aside class="notes">
+OK, let's take a look at my buzzword bingo card, see how I did, yes Headless, yes, GraphQL (that'll make Pete Duncanson happy),<br>
+aw crap, we didn't get "Machine Learning" in the talk! Oh well!<br>
+You'll have to see Steve's talk this afternoon!<br>
+					</aside>
+				</section>
+				
+				<section data-state="bg-blue">
+					<h2>Thank you!</h2>
+					<p>leekelleher.com/contact</p>
+					<p>@leekelleher</p>
+					<aside class="notes">
+No questions<br>
+<br>
+Let's chat in the break
+					</aside>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				slideNumber: true,
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
