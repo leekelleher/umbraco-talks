@@ -1,0 +1,601 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>The Road to Contentment - Making of a Killer Umbraco Package</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <style>
+        .reveal {
+            background: url(img/umbspark-bg-pattern.png) repeat #2ef0ff;
+        }
+
+            .reveal section h1,
+            .reveal section h2,
+            .reveal section h3,
+            .reveal section h4 {
+                background-color: #191919;
+                color: #2ef0ff;
+                display: inline-block;
+                padding: 5px 25px;
+                text-transform: none;
+            }
+
+            .reveal section img {
+                background: none;
+                border: 0;
+                box-shadow: none;
+                max-width: 300px
+            }
+
+                .reveal section img.fullwidth {
+                    max-width: 100%;
+                }
+
+                .reveal section img.wider {
+                    max-width: 600px;
+                }
+    </style>
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <img class="fullwidth" data-src="img/umbspark-presentation-landing-slide.png" alt="Umbraco Spark landing slide" />
+                <aside class="notes"></aside>
+            </section>
+
+            <!-- ACT 1. -->
+
+            <section>
+                <h1>Hello!</h1>
+                <aside class="notes">
+                    Who am I?<br />
+                    Has anyone seen one of my talks before?<br />
+                    I'm curious how long some of you have been around.
+                </aside>
+            </section>
+
+            <section data-background-image="img/lee-at-umbspark-2019.jpg" data-background-position="bottom" data-background-opacity="0.8">
+                <h2>SPARK 2019</h2>
+                <h3>The one about headless</h3>
+                <aside class="notes">
+                    Did anyone see my talk at Spark last year?
+                </aside>
+            </section>
+
+            <section data-background-image="img/lee-at-cg18.jpg" data-background-position="bottom" data-background-opacity="0.8">
+                <h2>CodeGarden 18</h2>
+                <h3>The one with the sock puppets</h3>
+                <br><br><br><br><br><br><br><br><br>
+                <aside class="notes">
+                    Did anyone see my talk at Code Garden 18? You know, the one with the socks puppets
+                </aside>
+            </section>
+
+            <section data-background-image="img/lee-at-cg15.jpg" data-background-position="top" data-background-opacity="0.8">
+                <h2>CodeGarden 15</h2>
+                <h3>The one about killer packages</h3>
+                <br><br><br><br><br><br><br><br><br>
+                <aside class="notes">
+                    Did anyone see my talk at CodeGarden15? - the one with Matt Brailsford
+                </aside>
+            </section>
+
+            <section data-background-image="img/lee-at-cg12.jpg" data-background-position="bottom" data-background-opacity="0.8">
+                <br><br><br>
+                <h2>CodeGarden 12</h2>
+                <h3>The one where v5 was killed off</h3>
+                <h4 class="fragment">and I rambled on about uComponents</h4>
+                <aside class="notes">
+                    or at CG12 when v5 got killed off, then I was invited on stage to lighten the mood.<br />
+                    Uh-oh, we're showing our age now. I see a few nodding heads.
+                </aside>
+            </section>
+
+            <section>
+                <div><img data-src="img/nxnw_300x300.png" alt="Lee's avatar"></div>
+                <h3>@leekelleher</h3>
+                <aside class="notes">
+                    For those who don't know who I am, or are thinking "I don't recall seeing this guy at last year's UK Festival".<br />
+                    This is me, well how you'd probably see me online.<br />
+                    I'm Lee Kelleher, been building with Umbraco for about 12 years
+                </aside>
+            </section>
+
+            <section>
+                <div><img data-src="img/umbristol.png" alt="umBristol logo"></div>
+                <h2>umBristol</h2>
+                <aside class="notes">
+                    I helped to start up the Umbraco Bristol User Group, umBristol - 10 years ago.<br />
+                    We've built up a strong local community.<br />
+                    In some way I like to think umBristol gave light to make the Spark events happen.<br />
+                    Love you umBristol folk.
+                </aside>
+            </section>
+
+            <section>
+                <div><img data-src="img/umbraco-mvp-2010.jpg" alt="Umbraco MVP 2010/11"></div>
+                <h2>Community / Packages</h2>
+                <aside class="notes">
+                    I'm known for making a bunch of packages, (many with Matt Brailsford), and I've been awarded MVP several times<br />
+                    It frustrates Matt when I mention how many times, so best not mention it... 9 times!<br />
+                    Love you Matt. Of course speaking of Matt, this a beautiful segue to... CODECABIN!
+                </aside>
+            </section>
+
+            <section data-background-image="img/codecabin-venue.jpg" data-background-opacity="0.8">
+                <div><img style="background-color:#191919;padding:5px 25px;" data-src="img/codecabin-logo.png" alt="CODECABIN"></div>
+                <h2 style="color:#fff;">9TH - 12TH OCT 2020</h2>
+                <div class="fragment">
+                    <h3 style="color:#fff;">&darr; APPLY NOW &darr;</h3><br />
+                    <h4 style="color:#fff;">https://codecab.in/</h4>
+                </div>
+                <aside class="notes">
+                    CODECABIN, a unique Umbraco experience. This will be the 5th year.<br />
+                    Weekend away in the countryside, 20 developers, great food, great networking.<br />
+                    Applications are open!<br />
+                    Raise of hands who's been to CODECABIN?<br />
+                    Yep, a lot of smiling faces, thinking about Lucy's sunday roast! Love you Lucy.
+                </aside>
+            </section>
+
+            <section>
+                <div><img class="fullwidth" data-src="img/umbrella-logo.png" alt="Umbrella"></div>
+                <aside class="notes">
+                    ...and whilst I'm plugging things...<br />
+                    My company is Umbrella - because Rich is curious about what's our ROI from the hours I poured into this talk.<br />
+                    Love you Rich.<br />
+                    We're one of the sponsors of Spark.<br />
+                </aside>
+            </section>
+
+            <section>
+                <img class="wider" style="background-color:#fff;border:4px solid #e1b126;padding:5px 20px;" data-src="img/umbraco-gold-partner.png" alt="Umbraco Gold Partner">
+                <aside class="notes">
+                    We've been an UMBRACO GOLD PARTNER since 2013.
+                </aside>
+            </section>
+
+            <section>
+                <img class="wider" data-src="img/umbraco-cloud-powerhouse.png" alt="Umbraco Cloud Powerhouse">
+                <aside class="notes">
+                    ...and we're also an UMBRACO CLOUD POWERHOUSE!<br />
+                    It always feels funny plugging your Umbraco agency to a bunch of other people from Umbraco agencies<br />
+                    It's not like you're going to use our services, unless if you need a backup team, advanced Umbraco skills, then maybe we could help each other out?<br />
+                </aside>
+            </section>
+
+            <section>
+                <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                <aside class="notes">
+                    Now that we're all friends, before I show you all the delights of a new package I've been working on.<br />
+                    I'd like to explain the title and subtitle, and alternative ones that didn't quite make the cut.<br />
+                    I may have got a bit carried away...
+                </aside>
+            </section>
+
+            <section>
+                <h1>THE ROAD TO<br />CONTENTMENT</h1>
+                <aside class="notes">
+                    Firstly, the title. "Contentment" is the name of the new package, and this is the journey so far.
+                </aside>
+            </section>
+
+            <section>
+                <h2>MAKING OF A KILLER<br />UMBRACO PACKAGE</h2>
+                <aside class="notes">
+                    It sounds like a Netflix series<br />
+                    But really it a callback to my CodeGarden 15 talk.<br />
+                    I'd originally wanted to have more references to it, but this talk ended up taking a different direction.
+                </aside>
+            </section>
+
+            <section>
+                <h3>CONFESSIONS OF A SERIAL<br />UMBRACO PACKAGE DEVELOPER</h3>
+                <aside class="notes">
+                    Again sounds like it was inspired by another Netflix series<br />
+                    I was trying to convey the message that I've been doing this a long time, made a lot of packages, and this was my story.<br />
+                    ...or I was just getting carried away.
+                </aside>
+            </section>
+
+            <section>
+                <h3>THE VIRTUE OF ACCEPTING<br />THE BANALITY AND SENSE OF<br />ENTITLEMENT IN OPEN SOURCE</h3>
+                <aside class="notes">
+                    Gawd that's a mouthful!<br />
+                    Yes! I'd definitely gone too far!<br />
+                    I'd recently watched Birdman (on Netflix), guess I wanted to drop "virtue" in somewhere<br />
+                    Though, for those of you who like big words, it's surprisingly accurate... read into that as you will.
+                </aside>
+            </section>
+
+            <!-- ACT 2. -->
+
+            <section>
+                <h1 class="fragment">BURN OUT!</h1>
+                <aside class="notes">
+                    So to tell the real story is how Contentment came to be. It began with...<br />
+                    Burn out! Can happen to the best of us.<br />
+                    How did this happen?
+                </aside>
+            </section>
+
+            <section data-background-image="img/lee-at-umbspark-2019.jpg" data-background-position="bottom" data-background-opacity="0.8">
+                <h2>MY TALK AT<br />SPARK 2019</h2>
+                <aside class="notes">
+                    Cast your mind back 12 months ago...<br />
+                    For those what did see my talk at Spark last year - it went okay, had good feedback, (folks said it was interesting, good insights),<br />
+                    but by god, I bored myself with it! I recall one point mid-talk where I was thinking what's the point of this?<br />
+                    This had nothing to do the event itself, it was my own fault for picking a topic that didn't come from my heart.<br />
+                    It wasn't personal enough.
+                </aside>
+            </section>
+
+            <section data-background-color="rgb(40, 74, 65, 0.6)">
+                <img data-src="img/carlsberg-group.png" alt="Carlsberg Group">
+                <aside class="notes">
+                    I was still coming to terms that Carlsberg outsourced the support contract that we'd been doing for the previous 5 years, it was a big a corporation-wide swoop of all their IT projects.<br />
+                    We wanted another high profile international brand, which we found and was pitching for. Timings wise the final pitch was on the following Tuesday after Spark, which would have seen us good for the next year or so - and kept our client list high profile.<br />
+                    Was pretty stressed about that (during Spark). We didn't win the pitch, (we were told we came a close second), which knocked me off my feet.
+                </aside>
+            </section>
+
+            <section>
+                <div><img class="fullwidth" data-src="img/teacommerce-mug.jpg" alt="A mug of TeaCommerce" /></div>
+                <aside class="notes">
+                    A couple of months earlier, Matt and Lucy had bought TeaCommerce, which I am super happy about!<br />
+                    It, rightly, became their focus... but it meant the envitable...
+                </aside>
+            </section>
+
+            <section data-background-image="img/umco-bg.jpg" data-background-opacity="0.8">
+                <img data-src="img/umco.png" alt="UMCO">
+                <aside class="notes">
+                    What would happen with UMCO?<br />
+                    Our package development collaborations slowed down.<br />
+                    We eventually agreed to close down our Patreon campaign.
+                </aside>
+            </section>
+
+            <section data-background-image="img/umbraco-8.jpg" data-background-opacity="0.8">
+                <div><img class="wider" data-src="img/umbraco.png" alt="Umbraco 8"></div>
+                <aside class="notes">
+                    ...and this coincided with the release of Umbraco v8 (Feb 2019)<br />
+                    We hadn't quite expected to drop at the time it did.<br />
+                    Suddenly I was getting lots of pressure about v8 support...<br />
+                    Where's my DocTypeGridEditor? Where's my Stacked Content?!
+                </aside>
+            </section>
+
+            <section data-background-image="img/bob-geldof.jpg" data-background-opacity="0.8">
+                <h2 class="fragment">GIVE ME YOUR<br />STACKED CONTENT!!!</h2>
+                <aside class="notes">
+                    So there I was struggling to stay afloat, and getting hassled to build tools for businesses to sell their v8 solutions on.<br />
+                    Pff!<br />
+                    I mean, why would I dev for v8 if I wasn't even using it?<br />
+                    Which made me think of Bob Geldof during LiveAid...<br />
+                    _(bad Irish accent)_<br />
+                    "No! We need to build v8 sites now! *slams desk* Give me your fookin' Stacked Content now!" _(ok, terrible impression, sorry!)_
+                </aside>
+            </section>
+
+            <section data-background-image="img/boris.png" data-background-position="top" data-background-opacity="0.4">
+                <h1>BREXIT</h1>
+                <aside class="notes">
+                    Then on top of all this, there was Brexit.<br />
+                    Of course, not Umbraco related, but I wasted far too much time and energy following what was happening.<br />
+                    Blurgh!
+                </aside>
+            </section>
+
+            <section>
+                <img class="wider" data-src="img/mid-life-crisis.jpg" alt="mid-life crisis">
+                <aside class="notes">
+                    or maybe that I'd recently turned 40... am I having a mid-life crisis?<br />
+                    who knows? who cares? get over yerself!
+                </aside>
+            </section>
+
+            <section>
+                <div><img class="wider" data-src="img/burnout-headless.jpg"></div>
+                <aside class="notes">
+                    This is me last year during my Spark talk.<br />
+                    Taking all those things into account, winding up UMCO, v8 launch, shamings, general burn out and feeling deflated and irrelevant.<br />
+                    I'd started re-evaluating my relationship with Umbraco and the community. I didn't want to be forced into anything.<br />
+                    I still loved to develop, but I wanted to develop something for myself, not for the sake of doing it, not to be contrived.<br />
+                </aside>
+            </section>
+
+            <section>
+                <div class="fragment"><img class="wider" data-src="img/lee-story-time.png" alt="lee-story-time"></div>
+                <aside class="notes">
+                    In retrospect, I'd done the same with uComponents when Umbraco v7 came out.<br />
+                    I'd even wrote a 24 Days article about this very thing!<br />
+                    Expectation is the mother of all frustration.
+                </aside>
+            </section>
+
+            <section data-background-image="img/greenfield-brownfield.png" data-background-opacity="0.9">
+                <div class="fragment"><h2>BROWNFIELD</h2></div>
+                <div class="fragment"><h4>VS</h4></div>
+                <div class="fragment"><h2>GREENFIELD</h2></div>
+                <aside class="notes">
+                    Back on my day-to-day at Umbrella. We started to get a lot of enquiries about brownfield projects - clients who ended up in a bad relationship with their agency<br />
+
+                    It's funny how many Umbraco sites suffer with performance from the dreaded `.Descendants()` API, well that, and dynamics!<br />
+                    Another funny thing is how many of these sites were using packages that I'd built (or contributed to).<br />
+
+                    But what I found from working on several brownfield sites, I started to get bored (technically), I was stuck on v7! No v8 for me!
+                </aside>
+            </section>
+
+            <!-- ACT 3. -->
+
+            <section data-background-image="img/umbraco-8.jpg" data-background-opacity="0.8">
+                <div><img class="wider" data-src="img/umbraco.png" alt="Umbraco 8"></div>
+                <aside class="notes">
+                    All I knew about v8 was the 3 big marketing features - not much else.<br />
+                    I wanted to know more. I was curious what the differences were from v7 (from a package perspective).<br />
+                    So I dabbled with it between support tickets.
+                </aside>
+            </section>
+
+            <section data-background-image="img/umbraco-8.jpg" data-background-opacity="0.8">
+                <div><img data-src="img/stacked-content.png" alt="Stacked Content logo"></div>
+                <h2>Stacked Content</h2><br />
+                <h4>FOR V8</h4>
+                <aside class="notes">
+                    First thing I looked at was, could I port Stacked Content over to v8?<br />
+                    Which I actually did.<br />
+                    But I hated it! Felt so contrived, so forced!<br />
+                    I wouldn't have felt happy to release it and support it.<br />
+
+                    I needed to do something that didn't put pressure on myself, so I looked at my past to determine my future.
+                </aside>
+            </section>
+
+            <section data-background-image="img/umbraco-8.jpg" data-background-opacity="0.8">
+                <div><img data-src="img/ucomponents.png" alt="uComponents"></div>
+                <h2>uComponents</h2>
+                <aside class="notes">
+                    I went back to my uComponents roots... I took a look at some of the simpler Property Editors that we had, that no one else appeared to have modernised.  I recalled one called RenderMacro, which was a readonly editor, that rendered a macro in the backoffice to appear as an instructional/editorial note - or a breadcrumb trail.<br />
+
+                    It was cathartic.
+                </aside>
+            </section>
+
+            <section>
+                <video id="video1" data-autoplay controls muted>
+                    <source data-src="video/ucomponents-datatype-rendermacro.mp4" type="video/mp4" />
+                </video>
+                <script>
+                    document.getElementById('video1').addEventListener('playing', function () {
+                        console.log("hello", this.currentTime);
+                        if (this.currentTime < 30) {
+                            this.pause();
+                            this.currentTime = 30;
+                            this.playbackRate = 3;
+                            this.play();
+                        }
+                    }, false);
+                </script>
+                <aside class="notes">
+                    uComponents RenderMacro was one of those were people wasn't expecting it, nor demanding it. I felt safe to explore.
+                </aside>
+            </section>
+
+            <section>
+                <section>
+                    <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                    <div><h2>STOP!</h2></div>
+                    <div class="fragment"><h2>DEMO TIME!</h2></div>
+                </section>
+
+                <section>
+                    <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                    <h2>Render Macro</h2>
+                    <aside class="notes">
+                        then prototyped how that would work in v8.
+                        Then making Render Macro, meant that I needed a Macro Picker
+                        so I looked around the Umbraco core source to see what I could find...
+                        no property editor as such, there was a Macro Picker for TinyMCE, and one for a Grid Editor, and another for the Template editor...
+                        but not property-editor, the overlay was there, just the UI editor was missing.
+                    </aside>
+                </section>
+                <section>
+                    <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                    <h2>Macro Picker</h2>
+                    <aside class="notes">
+                        so I made that...
+                        now the Macro could be selected and configured.
+                        But then the Macro Picker would need a way to restrict the available Macros...
+                        so use the Macro Picker inside itself
+                    </aside>
+                </section>
+                <section>
+                    <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                    <h2>Entity Picker</h2>
+                    <aside class="notes">
+                        but wait, no, this wasn't a way to configure a Macro (with parameters),
+                        I just wanted to reference the Macro, (say by UDI), so it was really an Entity Picker that was needed...
+                        so I made that. Where the Entity Picker could be configured to select from different Umbraco entity types.
+
+                        I found the `entityResource` API, where you could pass through the `entityType`.
+
+                        I found the Umbraco "entitypicker" which was a dropdown, with multi-select option ... it wasn't very slick, wasn't very "v8".
+                    </aside>
+                </section>
+                <section>
+                    <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                    <h2>Data List</h2>
+                    <aside class="notes">
+                        At this point, I had wrangled the Item Picker overlay (from Umbraco), that I could populate it with whatever I wanted...
+                        (as long as the item had a name/value/icon/description), then we could have a picker for anything. So I made it extensible...
+                        having various data sources - Enum, SQL, XML, JSON, Umbraco entities - and it was pluggable too!
+                        ...
+                        But wait, if I made the data source extensible - why not the editor UI?
+                        Why have a separate Property Editor if I wanted to populate, say, a checkbox list or dropdown list or radiobutton list from one of those data sources? So I made that extensible too - and Data List was born.
+
+                        Oh no, I'd killed nuPickers!<br />
+                        eek, love you Hendy!
+
+                        but looking back over my uComponents ideas, there was an idea for Data List that pre-dated nuPickers
+                        with the involvement of Hendy, Tom Fulton, et al.
+                    </aside>
+                </section>
+                <section>
+                    <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                    <h2>Cascading Dropdown List</h2>
+                    <aside class="notes">
+                        In making Data List, the component that powered the custom data source / list editor provider became its own thing� Configuration Editor. Give it list of C# classes (of a common interface) and it would open an overlay editor with those `ConfigurationField` options.
+
+                        In prototyping some of the data sources, other Property Editors were created. E.g. with the Enum data source, I needed an interface that would cascade a selected value, e.g. an assembly name, to the next interface, to select the enum type. I made this as a series of dropdown lists� Cascading Dropdown List editor became a thing - provide a list of API endpoints, which will call the next endpoint with the selected value(s).
+                    </aside>
+                </section>
+                <section>
+                    <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                    <h2>Icon Picker</h2>
+                    <aside class="notes">Another was Icon Picker, which was needed for the general Item Picker, so if a custom data source didn't provide an icon, a default one could be used.</aside>
+                </section>
+                <section>
+                    <div><img data-src="img/contentment-logo.png" alt="Contentment logo"></div>
+                    <h2>Notes</h2>
+                    <aside class="notes">For some of the data source and list editors, I wanted to display friendly helpful notes, so I created a basic Notes property editor - a lightweight version of the uComponents Notes and Marc Goodson�s uEditorNotes package.</aside>
+                </section>
+            </section>
+
+            <!-- ACT 4. -->
+
+            <section>
+                <h3>My relationship with...</h3>
+                <h1 class="fragment">OPEN SOURCE</h1>
+                <aside class="notes">
+                    OK, so now that I made all these cool toys.<br />
+                    Now what do I do with it?<br />
+                    Have I come to terms with my relationship with open source?<br />
+
+                    Niggled by MIT licensing, that I wanted to keep my code open-source, so switched from MIT to Mozilla Public License (MPL).
+                </aside>
+            </section>
+
+            <section>
+                <h3>My relationship with...</h3>
+                <h1 class="fragment">ENTITLEMENT</h1>
+                <aside class="notes">
+                    The "take, take, take" attitude was eating away at me. How can I set the expectations?<br />
+
+                    I had to understand what Entitlement meant.<br />
+                    I found this... "Entitlement is the separation of rights from responsibility."<br />
+
+                    Open source communities and ecosystems can't remain stable and sustainable without respecting that rights and responsibility are inseparable.
+                </aside>
+            </section>
+
+            <section>
+                <h3>My relationship with...</h3>
+                <h1 class="fragment">RIGHTS AND RESPONSIBILITIES</h1>
+                <aside class="notes">
+                    As the developer of the software, I am granting you rights to use the software.<br />
+                    You are being empowered.<br />
+                    As a user, the responsibility of using that software is yours not mine. You have been empowered!.<br />
+                    The mistake that is often made is that users tend to see themselves as customers of Open Source software.<br />
+                    You are not a customer unless you are paying for a service. Business critical issues are your responsibility not the Open Source developer.
+                </aside>
+            </section>
+
+            <section>
+                <h1>WHAT NOW?</h1>
+                <aside class="notes">
+                    We've reach the part of this story where you come in.<br />
+                    The Contentment journey hasn't finished, for me it feels that we're at a mid-point.<br />
+                    I have lots of ideas for the package itself, new features, new editors, (some already prototyped, like ContentBlocks).
+                </aside>
+            </section>
+
+            <section>
+                <h1>WHAT NEXT?</h1>
+                <aside class="notes">
+                    I'm struggling with what direction to take, how can I make this sustainable?<br />
+                    How I can prevent myself from throwing it all away again once v9 (.NET Core) is released?
+                </aside>
+            </section>
+
+            <section>
+                <h2>COMMERCIAL POTENTIAL?</h2>
+                <aside class="notes">
+                    Should I push for sponsorship - a patron? (UMCO example) Should I make the package commercial?<br />
+                    What do you think? Hand on heart, would you pay for this package? or a suite of packages like this?<br />
+                    Would you raise a Purchase Order (PO) in your company for this?<br />
+                    If so, how much is it worth?<br />
+                    After all it's currently open source - but it's just me. It must have value, but how much value?<br />
+                    I mean if we don't have Stacked Content, then Nested Content will do, right?
+                </aside>
+            </section>
+
+            <section>
+                <div><h1>BETA RELEASE</h1></div>
+                <div class="fragment"><h2>VERY SOON</h2></div>
+                <div class="fragment"><h4>(this month)</h4></div>
+                <aside class="notes">
+                    Release it? Beta (for now)
+                </aside>
+            </section>
+
+            <section>
+                <div><h4>github.com/leekelleher/umbraco-contentment</h4></div>
+                <aside class="notes"></aside>
+            </section>
+
+            <section>
+                <div><h2>Thank you!</h2></div>
+                <div><h4>leekelleher.com/contact<br />@leekelleher</h4></div>
+                <aside class="notes">
+                    Any questions?
+                    or the discussion can continues over a beer?
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            fragmentInURL: true,
+            hash: true,
+            history: true,
+            slideNumber: true,
+            defaultTiming: 42,
+            transition: 'fade',
+            dependencies: [
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/highlight/highlight.js' },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>

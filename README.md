@@ -13,9 +13,10 @@
 * [umBristol Talks - Fractal Rock](umBristol/2017-11-29/) (November 2017) [(info)](umBristol/2017-11-29/README.md)
 * [CodeGarden 18 - Applying Atomic Design to Umbraco](CG18/) (May 2018) [(info)](CG18/README.md)
 * [Umbraco Spark 2019 - Don't lose your head! The State of Decoupling Umbraco in 2019](USIC19/) (March 2019) [(info)](USIC19/README.md)
+* [Umbraco Spark 2020 - The Road to Contentment - Making of a Killer Umbraco Package](USIC20/) (March 2020) [(info)](USIC20/README.md)
 
 ### License
 
-Copyright &copy; 2010-2019 Lee Kelleher (and [other contributors](https://github.com/leekelleher/umbraco-talks/graphs/contributors))
+Copyright &copy; 2010-2020 Lee Kelleher (and [other contributors](https://github.com/leekelleher/umbraco-talks/graphs/contributors))
 
 Licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE.md)
