@@ -21,7 +21,7 @@ The slides are available here as a PDF export (from Google Slides): <https://lee
 
 Links to useful Bellissima resources for package migration.
 
-- [Mounting UI in New Backoffice with Niels Lyngsø; September 2023](https://www.youtube.com/watch?v=nepGWj1G-A8)
+- [Mounting UI in New Backoffice with Niels Lyngso; September 2023](https://www.youtube.com/watch?v=nepGWj1G-A8)
 - [Nathan Woulfe - Practical adventures with Bellissima; Umbraco Community Day, December 2023](https://www.youtube.com/watch?v=OwLOtzvx_o4)
 - [UmbraCollab: Umbraco Bellissima Property Editors - First Look; February 2024]()
 - [Kevin Jump's Early Adopter's Guide to Umbraco v14 articles series; January 2024-present](https://dev.to/kevinjump/series)
