@@ -11,7 +11,7 @@ Bellissima is on the horizon, the Umbraco 14 release draws near, everyone is eag
 
 ### The Speaker
 
-- [Lee Kelleher](leekelleher.com)
+- [Lee Kelleher](https://leekelleher.com)
 
 ### The Slides
 
