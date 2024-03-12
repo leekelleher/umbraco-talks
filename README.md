@@ -16,9 +16,11 @@
 * [Umbraco Spark 2020 - The Road to Contentment - Making of a Killer Umbraco Package](USIC20/) (March 2020) [(info)](USIC20/README.md)
 * [Umbraco Community Day 2023 - Finding Contentment](UCD23/) (January 2023) [(info)](UCD23/README.md)
 * [Umbraco Spark 2023 - Playmaker: Dances with Wolves - Productising an Umbraco solution](USIC23/) (March 2023) [(info)](USIC23/README.md)
+* [CodeGarden 23 - Finding Contentment (Redux)](CG23/) (June 2023) [(info)](CG23/README.md)
+* [Umbraco Spark 2024 - Bellissima migrazione dei pacchetti - Beautiful package migration](USIC24/) (March 2024) [(info)](USIC24/README.md)
 
 ### License
 
-Copyright &copy; 2010-2023 Lee Kelleher (and [other contributors](https://github.com/leekelleher/umbraco-talks/graphs/contributors))
+Copyright &copy; 2010-2024 Lee Kelleher (and [other contributors](https://github.com/leekelleher/umbraco-talks/graphs/contributors))
 
 Licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE.md)
